@@ -11,6 +11,11 @@
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
 		CB55A23326DBC858001F88E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */; };
+		FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7426DFFC960080CF93 /* HomeView.swift */; };
+		FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7626E0008A0080CF93 /* ExposView.swift */; };
+		FB054D7926E000920080CF93 /* BoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7826E000920080CF93 /* BoletosView.swift */; };
+		FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7A26E0009B0080CF93 /* TiendaView.swift */; };
+		FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7C26E000A30080CF93 /* MarcoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		CB55A22F26DBC858001F88E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB55A23426DBC858001F88E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB054D7426DFFC960080CF93 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB054D7626E0008A0080CF93 /* ExposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposView.swift; sourceTree = "<group>"; };
+		FB054D7826E000920080CF93 /* BoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosView.swift; sourceTree = "<group>"; };
+		FB054D7A26E0009B0080CF93 /* TiendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiendaView.swift; sourceTree = "<group>"; };
+		FB054D7C26E000A30080CF93 /* MarcoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,11 @@
 			children = (
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
 				CB55A22D26DBC858001F88E3 /* MainView.swift */,
+				FB054D7626E0008A0080CF93 /* ExposView.swift */,
+				FB054D7826E000920080CF93 /* BoletosView.swift */,
+				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
+				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
+				FB054D7426DFFC960080CF93 /* HomeView.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
 				CB55A23126DBC858001F88E3 /* Preview Content */,
@@ -138,7 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */,
+				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
+				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
+				FB054D7926E000920080CF93 /* BoletosView.swift in Sources */,
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
+				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

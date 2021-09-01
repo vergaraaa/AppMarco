@@ -8,19 +8,48 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    enum Tab{
+        case home
+        case expos
+        case boletos
+        case tienda
+        case marco
+    }
+    
+    @State private var selection: Tab = .home
+    
+    init(){
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = UIColor(Color("RosaMarco"))
+        
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UINavigationBar.appearance().tintColor = UIColor(Color("RosaMarco"))
+        
+        let tabBarApperance = UITabBarAppearance()
+        tabBarApperance.backgroundColor = UIColor.white
+        UITabBar.appearance().standardAppearance = tabBarApperance
+    }
+    
     var body: some View {
-        TabView{
-            Text("Home")
-                .tabItem {
+        TabView(selection: $selection){
+            NavigationView{
+                HomeView()
+            }
+            .tabItem {
                     let menuText = Text("Home", comment: "Home")
                     Label{
                         menuText
                     } icon: {
                         Image(systemName: "house")
                     }
-                }
+                }.tag(Tab.home)
             
-            Text("Expos")
+            NavigationView{
+                ExposView()
+            }
                 .tabItem {
                     let menuText = Text("Expos", comment: "Expos")
                     Label{
@@ -28,9 +57,11 @@ struct MainView: View {
                     } icon: {
                         Image(systemName: "photo")
                     }
-                }
+                }.tag(Tab.expos)
             
-            Text("Boletos")
+            NavigationView{
+                BoletosView()
+            }
                 .tabItem {
                     let menuText = Text("Boletos", comment: "Boletos")
                     Label{
@@ -38,9 +69,11 @@ struct MainView: View {
                     } icon: {
                         Image(systemName: "ticket")
                     }
-                }
+                }.tag(Tab.boletos)
             
-            Text("Tienda")
+            NavigationView{
+                TiendaView()
+            }
                 .tabItem {
                     let menuText = Text("Tienda", comment: "Tienda")
                     Label{
@@ -48,9 +81,11 @@ struct MainView: View {
                     } icon: {
                         Image(systemName: "cart")
                     }
-                }
+                }.tag(Tab.tienda)
             
-            Text("Marco")
+            NavigationView{
+                MarcoView()
+            }
                 .tabItem {
                     let menuText = Text("Marco", comment: "Marco")
                     Label{
@@ -58,7 +93,7 @@ struct MainView: View {
                     } icon: {
                         Image(systemName: "square")
                     }
-                }
+                }.tag(Tab.marco)
         }
         .accentColor(Color("RosaMarco"))
     }
