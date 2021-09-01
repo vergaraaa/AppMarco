@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
-		CB55A22E26DBC858001F88E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* ContentView.swift */; };
+		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
 		CB55A23326DBC858001F88E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		CB55A22826DBC858001F88E3 /* AppMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMarcoApp.swift; sourceTree = "<group>"; };
-		CB55A22D26DBC858001F88E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB55A22D26DBC858001F88E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CB55A22F26DBC858001F88E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB55A23426DBC858001F88E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
-				CB55A22D26DBC858001F88E3 /* ContentView.swift */,
+				CB55A22D26DBC858001F88E3 /* MainView.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
 				CB55A23126DBC858001F88E3 /* Preview Content */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB55A22E26DBC858001F88E3 /* ContentView.swift in Sources */,
+				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
