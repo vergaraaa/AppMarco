@@ -20,14 +20,6 @@ struct MainView: View {
     @State private var selection: Tab = .home
     
     init(){
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = UIColor(Color("RosaMarco"))
-        
-        UINavigationBar.appearance().standardAppearance = navBarAppearance
-        UINavigationBar.appearance().compactAppearance = navBarAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
-        UINavigationBar.appearance().tintColor = UIColor(Color("RosaMarco"))
-        
         let tabBarApperance = UITabBarAppearance()
         tabBarApperance.backgroundColor = UIColor.white
         UITabBar.appearance().standardAppearance = tabBarApperance
@@ -39,61 +31,71 @@ struct MainView: View {
                 HomeView()
             }
             .tabItem {
-                    let menuText = Text("Home", comment: "Home")
-                    Label{
-                        menuText
-                    } icon: {
-                        Image(systemName: "house")
-                    }
-                }.tag(Tab.home)
+                let menuText = Text("Home", comment: "Home")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "house")
+                }
+            }
+            .tag(Tab.home)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
             
             NavigationView{
                 ExposView()
             }
-                .tabItem {
-                    let menuText = Text("Expos", comment: "Expos")
-                    Label{
-                        menuText
-                    } icon: {
-                        Image(systemName: "photo")
-                    }
-                }.tag(Tab.expos)
+            .tabItem {
+                let menuText = Text("Expos", comment: "Expos")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "photo")
+                }
+            }
+            .tag(Tab.expos)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
             
             NavigationView{
                 BoletosView()
             }
-                .tabItem {
-                    let menuText = Text("Boletos", comment: "Boletos")
-                    Label{
-                        menuText
-                    } icon: {
-                        Image(systemName: "ticket")
-                    }
-                }.tag(Tab.boletos)
+            .tabItem {
+                let menuText = Text("Boletos", comment: "Boletos")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "ticket")
+                }
+            }
+            .tag(Tab.boletos)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
             
             NavigationView{
                 TiendaView()
             }
-                .tabItem {
-                    let menuText = Text("Tienda", comment: "Tienda")
-                    Label{
-                        menuText
-                    } icon: {
-                        Image(systemName: "cart")
-                    }
-                }.tag(Tab.tienda)
+            .tabItem {
+                let menuText = Text("Tienda", comment: "Tienda")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "cart")
+                }
+            }
+            .tag(Tab.tienda)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
             
             NavigationView{
                 MarcoView()
             }
-                .tabItem {
-                    let menuText = Text("Marco", comment: "Marco")
-                    Label{
-                        menuText
-                    } icon: {
-                        Image(systemName: "square")
-                    }
-                }.tag(Tab.marco)
+            .tabItem {
+                let menuText = Text("Marco", comment: "Marco")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "square")
+                }
+            }
+            .tag(Tab.marco)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
         }
         .accentColor(Color("RosaMarco"))
     }
