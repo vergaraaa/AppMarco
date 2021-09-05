@@ -16,10 +16,16 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .principal, content: {
-                    Image("LogoMarco")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 20)
+                    HStack {
+                        Image("LogoMarco")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 20)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "person")
+                    }
                 })
             })
         }

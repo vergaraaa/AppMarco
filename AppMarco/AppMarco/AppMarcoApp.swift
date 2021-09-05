@@ -11,7 +11,8 @@ import SwiftUI
 struct AppMarcoApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            //MainView()
+            LoginView()
         }
     }
 }
