@@ -12,6 +12,7 @@ struct BoletosView: View {
         ZStack {
             VStack {
                 Text("Boletos")
+                Text("Hola Fabi")
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
