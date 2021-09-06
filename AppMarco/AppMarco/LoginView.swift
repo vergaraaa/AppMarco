@@ -47,12 +47,14 @@ struct LoginView: View {
                         destination: MainView(),
                         label: {
                             Text("Iniciar Sesión")
+                                .padding(.vertical, 10.0)
+                                .padding(.horizontal, 25.0)
                                 .clipShape(Capsule())
                                 //.accentColor(.white)
                                 .background(Color(.white))
-                                .padding()
-                                .cornerRadius(10)
+                                .cornerRadius(15)
                         })
+                        .padding()
                 }
                 .padding()
             }

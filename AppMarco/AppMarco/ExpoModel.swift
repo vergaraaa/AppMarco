@@ -15,7 +15,7 @@ class ExpoModel: ObservableObject{
     func LoadInfo(){
         var expo : Expos
         
-        expo = Expos(sNombre: "La Poetica del Regreso", sAutor: "Mario Garcia Torres", sFecha: "12 de Marzo - 21 de Agosto 2021", arrImages: ["MarioGraciaTorres"])
+        expo = Expos(sNombre: "La Poetica del Regreso", sAutor: "Mario Garcia Torres", sFecha: "12 de Marzo - 21 de Agosto 2021", arrImages: ["MarioGarciaTorres"])
         
         arrExpos.append(expo)
         
