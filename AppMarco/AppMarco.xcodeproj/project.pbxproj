@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACD2900F26E5D1530053CF6D /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACD2900E26E5D1530053CF6D /* RobotoSlab-Medium.ttf */; };
-		ACD2901226E5D17B0053CF6D /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACD2901126E5D17B0053CF6D /* RobotoSlab-Thin.ttf */; };
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
-		ACD2901E26E5E8970053CF6D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901D26E5E8970053CF6D /* WebView.swift */; };
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
@@ -24,15 +21,15 @@
 		FB054D7926E000920080CF93 /* BoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7826E000920080CF93 /* BoletosView.swift */; };
 		FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7A26E0009B0080CF93 /* TiendaView.swift */; };
 		FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7C26E000A30080CF93 /* MarcoView.swift */; };
+		FB9B68A626E67C3E00BCC7CF /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB9B68A526E67C3D00BCC7CF /* RobotoSlab-Medium.ttf */; };
+		FB9B68A826E67C5100BCC7CF /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB9B68A726E67C5100BCC7CF /* RobotoSlab-Thin.ttf */; };
+		FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9B68AB26E67C9A00BCC7CF /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ACD2900E26E5D1530053CF6D /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Medium.ttf"; path = "../../../../../Desktop/Fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
-		ACD2901126E5D17B0053CF6D /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Thin.ttf"; path = "../../../../../Downloads/Roboto_Slab/static/RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
-		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
-		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVModel.swift; sourceTree = SOURCE_ROOT; };
+		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
+		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
-		ACD2901D26E5E8970053CF6D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CB55A22826DBC858001F88E3 /* AppMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMarcoApp.swift; sourceTree = "<group>"; };
 		CB55A22D26DBC858001F88E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -46,6 +43,9 @@
 		FB054D7826E000920080CF93 /* BoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosView.swift; sourceTree = "<group>"; };
 		FB054D7A26E0009B0080CF93 /* TiendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiendaView.swift; sourceTree = "<group>"; };
 		FB054D7C26E000A30080CF93 /* MarcoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcoView.swift; sourceTree = "<group>"; };
+		FB9B68A526E67C3D00BCC7CF /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		FB9B68A726E67C5100BCC7CF /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
+		FB9B68AB26E67C9A00BCC7CF /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		ACD2900C26E5D12A0053CF6D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ACD2900E26E5D1530053CF6D /* RobotoSlab-Medium.ttf */,
-				ACD2901126E5D17B0053CF6D /* RobotoSlab-Thin.ttf */,
+				FB9B68A726E67C5100BCC7CF /* RobotoSlab-Thin.ttf */,
+				FB9B68A526E67C3D00BCC7CF /* RobotoSlab-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -87,8 +87,8 @@
 		CB55A22A26DBC858001F88E3 /* AppMarco */ = {
 			isa = PBXGroup;
 			children = (
+				FB9B68AD26E67CB000BCC7CF /* Models */,
 				ACD2900C26E5D12A0053CF6D /* Fonts */,
-				CBFAFA6F26E2FE2A00082696 /* Models */,
 				CBFAFA6A26E2DD5F00082696 /* Modifiers */,
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
 				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
@@ -99,7 +99,7 @@
 				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
 				FB054D7426DFFC960080CF93 /* HomeView.swift */,
 				ACD2901A26E5E6920053CF6D /* RVView.swift */,
-				ACD2901D26E5E8970053CF6D /* WebView.swift */,
+				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
 				CB55A23126DBC858001F88E3 /* Preview Content */,
@@ -123,11 +123,11 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		CBFAFA6F26E2FE2A00082696 /* Models */ = {
+		FB9B68AD26E67CB000BCC7CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 				ACD2901726E5E1F20053CF6D /* RVModel.swift */,
+				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,10 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD2900F26E5D1530053CF6D /* RobotoSlab-Medium.ttf in Resources */,
 				CB55A23326DBC858001F88E3 /* Preview Assets.xcassets in Resources */,
-				ACD2901226E5D17B0053CF6D /* RobotoSlab-Thin.ttf in Resources */,
 				CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */,
+				FB9B68A826E67C5100BCC7CF /* RobotoSlab-Thin.ttf in Resources */,
+				FB9B68A626E67C3E00BCC7CF /* RobotoSlab-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +205,7 @@
 			files = (
 				CB8831BB26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift in Sources */,
 				FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */,
-				ACD2901E26E5E8970053CF6D /* WebView.swift in Sources */,
+				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
