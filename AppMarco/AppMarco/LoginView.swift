@@ -50,7 +50,7 @@ struct LoginView: View {
                                 .padding(.vertical, 10.0)
                                 .padding(.horizontal, 25.0)
                                 .clipShape(Capsule())
-                                //.accentColor(.white)
+                                //.foregroundColor(Color("RosaMarco"))
                                 .background(Color(.white))
                                 .cornerRadius(15)
                         })

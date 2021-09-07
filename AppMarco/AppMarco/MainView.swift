@@ -41,7 +41,7 @@ struct MainView: View {
             }
             .tag(Tab.home)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
             
             NavigationView{
@@ -56,7 +56,7 @@ struct MainView: View {
                 }
             }
             .tag(Tab.expos)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
             
             NavigationView{
@@ -71,7 +71,7 @@ struct MainView: View {
                 }
             }
             .tag(Tab.boletos)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
             
             NavigationView{
@@ -86,7 +86,7 @@ struct MainView: View {
                 }
             }
             .tag(Tab.tienda)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
             
             NavigationView{
@@ -101,7 +101,7 @@ struct MainView: View {
                 }
             }
             .tag(Tab.marco)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(Color("RosaMarco")), hideSeparator: true)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
         }
         //.accentColor(Color("RosaMarco"))

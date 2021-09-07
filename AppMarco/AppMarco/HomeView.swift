@@ -41,28 +41,23 @@ struct HomeView: View {
                                     })//NavigationLink
                                 }
                             }//VStack
-                }
+                    }
 
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar(content: {
                     ToolbarItem(placement: .principal, content: {
-                        HStack {
-                            Image("LogoMarco")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 20)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "person")
-                        }
+                        Image("LogoMarco")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 20)
+                        
                     })
                 })
                 }
             }
         }
-    
-        }
+        
+    }
 //
 //
 //struct Home_Previews: PreviewProvider {

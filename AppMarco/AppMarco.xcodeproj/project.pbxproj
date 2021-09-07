@@ -14,6 +14,8 @@
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
 		CB55A23326DBC858001F88E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */; };
+		CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7526E6CCB800A3E685 /* MapView.swift */; };
+		CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */; };
 		CB8831BB26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */; };
 		CBA5659226E686B4003883CC /* Expos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659126E686B4003883CC /* Expos.swift */; };
 		CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659A26E68740003883CC /* ExpoModel.swift */; };
@@ -39,6 +41,8 @@
 		CB55A22F26DBC858001F88E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB55A23426DBC858001F88E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6A6D7526E6CCB800A3E685 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarApperanceModifier.swift; sourceTree = "<group>"; };
 		CBA5659126E686B4003883CC /* Expos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expos.swift; sourceTree = "<group>"; };
 		CBA5659A26E68740003883CC /* ExpoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoModel.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				FB054D7826E000920080CF93 /* BoletosView.swift */,
 				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
 				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
+				CB6A6D7526E6CCB800A3E685 /* MapView.swift */,
 				FB054D7426DFFC960080CF93 /* HomeView.swift */,
 				ACD2901A26E5E6920053CF6D /* RVView.swift */,
 				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
@@ -137,6 +142,7 @@
 			children = (
 				ACD2901726E5E1F20053CF6D /* RVModel.swift */,
 				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
+				CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,12 +227,14 @@
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
 				ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */,
+				CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */,
 				ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */,
 				FB054D7926E000920080CF93 /* BoletosView.swift in Sources */,
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
 				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
 				CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
+				CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */,
 				ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
