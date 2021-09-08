@@ -10,6 +10,8 @@
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
+		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
+		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
+		AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaRestauranteView.swift; sourceTree = "<group>"; };
+		AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarBoletosView.swift; sourceTree = "<group>"; };
 		CB55A22826DBC858001F88E3 /* AppMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMarcoApp.swift; sourceTree = "<group>"; };
 		CB55A22D26DBC858001F88E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -104,8 +108,10 @@
 				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
 				CBA565A226E6995C003883CC /* TestView.swift */,
 				CB55A22D26DBC858001F88E3 /* MainView.swift */,
+				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
 				FB054D7626E0008A0080CF93 /* ExposView.swift */,
 				CBA5659126E686B4003883CC /* Expos.swift */,
+				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
 				CBA5659A26E68740003883CC /* ExpoModel.swift */,
 				FB054D7826E000920080CF93 /* BoletosView.swift */,
 				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
@@ -228,10 +234,12 @@
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
 				ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */,
 				CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */,
+				AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */,
 				ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */,
 				FB054D7926E000920080CF93 /* BoletosView.swift in Sources */,
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
 				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
+				AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */,
 				CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
 				CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */,
