@@ -88,8 +88,18 @@ struct HomeView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 20)
+                            
                         })
                     })
+                    .padding(0.1)
+                    
+                    Image("Eventos-1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: width, height: height/3)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
+                        .cornerRadius(0.1)
                     Spacer()
                 }//VSTACK
             } // ScrollView
