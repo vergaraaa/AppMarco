@@ -51,7 +51,7 @@ struct ExposDetailView: View {
                         
                         NavigationLink(
                             destination: WebView(html: expo.urlVisita),
-                            label: {
+                            label: {	
                                 Text("RECORRIDO VIRTUAL")
                                     .font(.callout)
                                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
