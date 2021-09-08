@@ -24,7 +24,7 @@ struct LoginView: View {
                         .scaledToFit()
                         .frame(height:50)
                     
-                    Text("#MuseoParaTodos")
+                    Text("#MuseoDeTodos")
                         .font(.title2)
                         .foregroundColor(.white)
                         .padding(.bottom)

@@ -11,5 +11,7 @@ struct Expos: Identifiable {
     var sNombre: String
     var sAutor: String
     var sFecha: String
+    var sDescripcion: String
+    var urlVisita: String
     var arrImages: [String]
 }
