@@ -36,9 +36,7 @@ struct TiendaView: View {
                     .padding(.top, 25)
                 
                 Group{
-                Text("En Tienda Marco estamos comprometidos con la exposición, promoción y desarrollo de los creadores mexicanos.")
-                    
-                Text("En cada compra apoyas a los creadores mexicanos y los programas culturales y educativos del Museo de Arte Contemporáneo de Monterrey")
+                Text("En Tienda Marco estamos comprometidos con la exposición, promoción y desarrollo de los creadores mexicanos.\n\nEn cada compra apoyas a los creadores mexicanos y los programas culturales y educativos del Museo de Arte Contemporáneo de Monterrey")
                 }
                 //.multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
