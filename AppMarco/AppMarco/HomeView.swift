@@ -41,14 +41,14 @@ struct HomeView: View {
                         Text("Exposiciones Actuales")
                             .multilineTextAlignment(.center)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
-                            .font(.custom("RobotoSlab-Medium", size:35))
-                            .foregroundColor(Color("RosaMarco"))
+                            .font(.title)
+                            .foregroundColor(Color(.black))
                             .padding()
                         
                         TabView(selection:$selected){
                             //Images
                             ForEach(0...2, id: \.self){
-                                index in
+                                index in					
                                 ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
                                     GeometryReader{reader in
                                         Image("\(String(index))")
