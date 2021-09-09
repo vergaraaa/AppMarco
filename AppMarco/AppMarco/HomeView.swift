@@ -37,12 +37,13 @@ struct HomeView: View {
 
                 ScrollView{
                     VStack {
-                        
-                        Text("Exposiciones Actuales")
+
+                        Text("EXPOSICIONES ACTUALES")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
                             .multilineTextAlignment(.center)
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
-                            .font(.custom("RobotoSlab-Medium", size:35))
-                            .foregroundColor(Color("RosaMarco"))
+                            //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                             .padding()
                         
                         TabView(selection:$selected){

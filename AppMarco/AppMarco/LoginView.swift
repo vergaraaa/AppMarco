@@ -55,6 +55,16 @@ struct LoginView: View {
                                 .cornerRadius(15)
                         })
                         .padding()
+                    
+                    NavigationLink(
+                        destination: MainView(),
+                        label: {
+                            Text("Continuar como invitado")
+                                .underline()
+                                .foregroundColor(Color(.white))
+                                .font(.subheadline)
+                        })
+                        .padding()
                 }
                 .padding()
             }

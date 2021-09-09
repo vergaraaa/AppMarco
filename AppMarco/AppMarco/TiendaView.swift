@@ -14,6 +14,8 @@ struct TiendaView: View {
             Color("BgVeige")
             VStack {
                 
+                
+                
                 Image("MarcoTienda")
                     .resizable()
                     .scaledToFit()
@@ -33,11 +35,20 @@ struct TiendaView: View {
                     })
                     .padding(.top, 25)
                 
-                Image("Texto")
+                Group{
+                Text("En Tienda Marco estamos comprometidos con la exposición, promoción y desarrollo de los creadores mexicanos.")
+                    
+                Text("En cada compra apoyas a los creadores mexicanos y los programas culturales y educativos del Museo de Arte Contemporáneo de Monterrey")
+                }
+                //.multilineTextAlignment(.center)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 20)
+                
+                /*Image("Texto")
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal, 20.0)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 20)*/
                 
                 NavigationLink(
                     destination: WebView(html: "https://my.matterport.com/show/?m=eDYbSrs2uRM&sr=-2.84,-1.18&ss=2"),
@@ -50,7 +61,7 @@ struct TiendaView: View {
                             
 
                     })
-                    .padding(.top, 25)
+                    .padding(.top, 15)
                 
                 
             }
