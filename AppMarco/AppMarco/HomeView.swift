@@ -37,8 +37,9 @@ struct HomeView: View {
 
                 ScrollView{
                     VStack {
-
+                        
                         Text("EXPOSICIONES ACTUALES")
+                            //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
@@ -49,7 +50,7 @@ struct HomeView: View {
                         TabView(selection:$selected){
                             //Images
                             ForEach(0...2, id: \.self){
-                                index in
+                                index in					
                                 ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
                                     GeometryReader{reader in
                                         Image("\(String(index))")
