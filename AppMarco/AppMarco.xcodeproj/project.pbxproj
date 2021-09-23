@@ -19,6 +19,7 @@
 		CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7526E6CCB800A3E685 /* MapView.swift */; };
 		CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */; };
 		CB8831BB26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */; };
+		CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3F02C26FCECFD00260594 /* AccountView.swift */; };
 		CBA5659226E686B4003883CC /* Expos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659126E686B4003883CC /* Expos.swift */; };
 		CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659A26E68740003883CC /* ExpoModel.swift */; };
 		CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAFA6C26E2DDE400082696 /* LoginView.swift */; };
@@ -48,6 +49,7 @@
 		CB6A6D7526E6CCB800A3E685 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarApperanceModifier.swift; sourceTree = "<group>"; };
+		CBA3F02C26FCECFD00260594 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CBA5659126E686B4003883CC /* Expos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expos.swift; sourceTree = "<group>"; };
 		CBA5659A26E68740003883CC /* ExpoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoModel.swift; sourceTree = "<group>"; };
 		CBFAFA6C26E2DDE400082696 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
 				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
 				CB55A22D26DBC858001F88E3 /* MainView.swift */,
+				CBA3F02C26FCECFD00260594 /* AccountView.swift */,
 				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
 				FB054D7626E0008A0080CF93 /* ExposView.swift */,
 				F3CB958026E828FA0078258C /* ExposDetailView.swift */,
@@ -242,6 +245,7 @@
 				AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */,
 				CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
+				CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */,
 				CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */,
 				ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */,
 			);

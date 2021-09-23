@@ -90,7 +90,7 @@ struct MainView: View {
             .navigationBarHidden(true)
             
             NavigationView{
-                MarcoView()
+                AccountView()
             }
             .tabItem {
                 let menuText = Text("Marco", comment: "Marco")
