@@ -107,26 +107,14 @@
 		CB55A22A26DBC858001F88E3 /* AppMarco */ = {
 			isa = PBXGroup;
 			children = (
+				ACD2900C26E5D12A0053CF6D /* Fonts */,
+				FB9B68AD26E67CB000BCC7CF /* Models */,
+				CBFAFA6A26E2DD5F00082696 /* Modifiers */,
+				CB8717A32708CB1A00BA5F2B /* Services */,
+				CB9035412708EBED00B12866 /* Views */,
 				CB8717A52708CB4E00BA5F2B /* ViewModels */,
 				CB8717A42708CB3400BA5F2B /* ViewsLogin */,
-				CB8717A32708CB1A00BA5F2B /* Services */,
-				FB9B68AD26E67CB000BCC7CF /* Models */,
-				ACD2900C26E5D12A0053CF6D /* Fonts */,
-				CBFAFA6A26E2DD5F00082696 /* Modifiers */,
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
-				CB55A22D26DBC858001F88E3 /* MainView.swift */,
-				CBA3F02C26FCECFD00260594 /* AccountView.swift */,
-				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
-				FB054D7626E0008A0080CF93 /* ExposView.swift */,
-				F3CB958026E828FA0078258C /* ExposDetailView.swift */,
-				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
-				FB054D7826E000920080CF93 /* BoletosView.swift */,
-				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
-				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
-				CB6A6D7526E6CCB800A3E685 /* MapView.swift */,
-				FB054D7426DFFC960080CF93 /* HomeView.swift */,
-				ACD2901A26E5E6920053CF6D /* RVView.swift */,
-				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
 				CB55A23126DBC858001F88E3 /* Preview Content */,
@@ -165,6 +153,66 @@
 				CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB9035412708EBED00B12866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB9035462708ECCB00B12866 /* Account */,
+				CB9035442708EC8000B12866 /* Boletos */,
+				CB9035432708EC7100B12866 /* Expos */,
+				CB9035422708EC3200B12866 /* Home */,
+				CB9035452708ECA000B12866 /* Marco */,
+				CB55A22D26DBC858001F88E3 /* MainView.swift */,
+				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB9035422708EC3200B12866 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ACD2901A26E5E6920053CF6D /* RVView.swift */,
+				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
+				FB054D7426DFFC960080CF93 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CB9035432708EC7100B12866 /* Expos */ = {
+			isa = PBXGroup;
+			children = (
+				FB054D7626E0008A0080CF93 /* ExposView.swift */,
+				F3CB958026E828FA0078258C /* ExposDetailView.swift */,
+			);
+			path = Expos;
+			sourceTree = "<group>";
+		};
+		CB9035442708EC8000B12866 /* Boletos */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
+				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
+				FB054D7826E000920080CF93 /* BoletosView.swift */,
+			);
+			path = Boletos;
+			sourceTree = "<group>";
+		};
+		CB9035452708ECA000B12866 /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
+				CB6A6D7526E6CCB800A3E685 /* MapView.swift */,
+			);
+			path = Marco;
+			sourceTree = "<group>";
+		};
+		CB9035462708ECCB00B12866 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CBA3F02C26FCECFD00260594 /* AccountView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		CBFAFA6A26E2DD5F00082696 /* Modifiers */ = {
