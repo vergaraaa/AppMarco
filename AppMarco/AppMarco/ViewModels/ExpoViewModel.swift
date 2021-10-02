@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-class ExpoModel: ObservableObject{
+class ExpoViewModel: ObservableObject{
     @Published var arrExpos = [Expos]()
     
     init(){

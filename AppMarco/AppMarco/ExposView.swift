@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExposView: View {
     
-    @StateObject var expo = ExpoModel()
+    @StateObject var expo = ExpoViewModel()
     
     var body: some View {
         ZStack {

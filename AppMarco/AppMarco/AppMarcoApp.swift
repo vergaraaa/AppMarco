@@ -9,10 +9,18 @@ import SwiftUI
 
 @main
 struct AppMarcoApp: App {
+    
+    @StateObject var loginVM = LoginViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            //MainView()
-            LoginView()
+            if(loginVM.isLogged){
+                MainView()
+            }
+            else{
+                LoginView()
+                    .environmentObject(loginVM)
+            }
         }
     }
 }

@@ -83,6 +83,7 @@ struct MarcoView: View {
                 } // VStack
                 .padding(.bottom)
                 .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden(true)
                 .toolbar(content: {
                     ToolbarItem(placement: .principal, content: {
                         Image("LogoMarco")
@@ -93,6 +94,7 @@ struct MarcoView: View {
                 })
             } // ScrollView
         } // ZStack
+        
     }
 }
 

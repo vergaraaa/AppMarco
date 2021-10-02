@@ -88,6 +88,7 @@ struct MainView: View {
             .tag(Tab.tienda)
             .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
             
             NavigationView{
                 AccountView()

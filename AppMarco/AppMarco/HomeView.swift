@@ -22,7 +22,7 @@ struct ImageOverlay: View{
 
 struct HomeView: View {
     
-    @StateObject var expo = ExpoModel()
+    @StateObject var expo = ExpoViewModel()
     @StateObject var rv = RVModel()
     @State var selected : Int = 0
     var height = UIScreen.main.bounds.height
