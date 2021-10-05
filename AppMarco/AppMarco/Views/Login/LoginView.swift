@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject private var loginVM : LoginViewModel
+    @State var showSignUp : Bool = false
     
     var body: some View {
         
@@ -50,6 +51,16 @@ struct LoginView: View {
                         .foregroundColor(.white)
                 })
                 
+                
+                Button(action: {
+                    self.showSignUp.toggle()
+                }, label: {
+                    Text("Sign up")
+                        .foregroundColor(.white)
+                })
+                .sheet(isPresented: $showSignUp, content: {
+                    SignUpView()
+                })
 //                NavigationLink(
 //                    destination: MainView(),
 //                    label: {

@@ -12,6 +12,7 @@
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
 		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
 		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
+		CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */; };
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
 		AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaRestauranteView.swift; sourceTree = "<group>"; };
 		AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarBoletosView.swift; sourceTree = "<group>"; };
+		CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CB55A22826DBC858001F88E3 /* AppMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMarcoApp.swift; sourceTree = "<group>"; };
 		CB55A22D26DBC858001F88E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CB11FA4F270BACD800C6AD66 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		CB55A21F26DBC858001F88E3 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +123,6 @@
 				CB8717A32708CB1A00BA5F2B /* Services */,
 				CB9035412708EBED00B12866 /* Views */,
 				CB8717A52708CB4E00BA5F2B /* ViewModels */,
-				CB8717A42708CB3400BA5F2B /* ViewsLogin */,
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
@@ -138,12 +147,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CB8717A42708CB3400BA5F2B /* ViewsLogin */ = {
+		CB8717A42708CB3400BA5F2B /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
+				CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */,
 			);
-			path = ViewsLogin;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CB8717A52708CB4E00BA5F2B /* ViewModels */ = {
@@ -158,13 +168,14 @@
 		CB9035412708EBED00B12866 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB11FA4F270BACD800C6AD66 /* Web */,
 				CB9035462708ECCB00B12866 /* Account */,
 				CB9035442708EC8000B12866 /* Boletos */,
 				CB9035432708EC7100B12866 /* Expos */,
 				CB9035422708EC3200B12866 /* Home */,
+				CB8717A42708CB3400BA5F2B /* Login */,
 				CB9035452708ECA000B12866 /* Marco */,
 				CB55A22D26DBC858001F88E3 /* MainView.swift */,
-				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +320,7 @@
 				CBA5659226E686B4003883CC /* Expos.swift in Sources */,
 				CB8717A82708CD9100BA5F2B /* LoginViewModel.swift in Sources */,
 				FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */,
+				CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */,
 				F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */,
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,

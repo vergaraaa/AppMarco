@@ -8,8 +8,35 @@
 import SwiftUI
 
 struct AccountView: View {
+//    @Binding var name: String
+    @EnvironmentObject var loginVM : LoginViewModel
+    
     var body: some View {
-        Text("cuenta")
+        ZStack{
+            Color("BgVeige")
+            
+            VStack{
+                Text("Nombre: ")
+//                    TextField("Nombre: ")
+                
+                Button(action: {
+                    loginVM.logout()
+                }, label: {
+                    Text("Sign out")
+                })
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .principal, content: {
+                    Image("LogoMarco")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 20)
+                })
+            })
+            
+        }
+        
     }
 }
 

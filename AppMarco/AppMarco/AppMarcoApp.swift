@@ -16,10 +16,12 @@ struct AppMarcoApp: App {
         WindowGroup {
             if(loginVM.isLogged){
                 MainView()
+                    .environmentObject(loginVM)
             }
             else{
                 LoginView()
                     .environmentObject(loginVM)
+                
             }
         }
     }

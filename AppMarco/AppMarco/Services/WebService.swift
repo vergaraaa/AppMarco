@@ -12,6 +12,11 @@ enum AuthenticationError: Error{
     case custom(errorMessage: String)
 }
 
+enum ComunicationError: Error{
+    case connectionError
+    case custom(errorMessage: String)
+}
+
 struct LoginRequestBody: Codable{
     let email : String
     let password: String
@@ -24,6 +29,18 @@ struct LoginResponse: Codable{
     let success: Bool?
 }
 
+struct SignUpRequestBody: Codable{
+    let name: String
+    let lastname: String
+    let email : String
+    let password: String
+    let usertype: [String]
+}
+
+struct SignUpResponse: Codable{
+    let message: String?
+    let success: Bool?
+}
 
 class WebService{
     func login(email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
@@ -61,5 +78,40 @@ class WebService{
             
         }.resume()
     }
+    
+    func signup(name: String, lastname: String, email: String, password: String, usertype: [String], completion: @escaping (Result<Bool, ComunicationError>) -> Void) {
+        
+        guard let url = URL(string: "https://api-marco.herokuapp.com/api/users/") else {
+            completion(.failure(.custom(errorMessage: "URL is not Correct")))
+            return
+        }
+    
+        let body = SignUpRequestBody(name: name, lastname: lastname, email: email, password: password, usertype: usertype)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(body)
 
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data, error == nil else {
+                completion(.failure(.custom(errorMessage: "No data")))
+                return
+            }
+            
+            guard let SignUpResponse = try? JSONDecoder().decode(SignUpResponse.self, from: data) else {
+                completion(.failure(.connectionError))
+                return
+            }
+            
+            guard let success = SignUpResponse.success else {
+                completion(.failure(.connectionError))
+                return
+            }
+            completion(.success(success))
+            
+            
+        }.resume()
+    }
 }

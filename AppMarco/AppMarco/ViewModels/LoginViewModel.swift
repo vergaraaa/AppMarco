@@ -9,9 +9,11 @@ import Foundation
 
 class LoginViewModel : ObservableObject {
     
-    var email : String = ""
-    var password : String = ""
-    
+    var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
+    var password : String = UserDefaults.standard.string(forKey: "password") ?? ""
+    var name : String = UserDefaults.standard.string(forKey: "name") ?? ""
+    var lastname : String = UserDefaults.standard.string(forKey: "lastname") ?? ""
+    var usertype: [String] = [""]
     @Published var isLogged : Bool = false
     
     func login() {
@@ -20,13 +22,46 @@ class LoginViewModel : ObservableObject {
             print(result)
             switch (result) {
             case .success(let token):
-                print(token)
-                self.isLogged = true
-            
+                DispatchQueue.main.async {
+                    self.isLogged = true
+                }
+                UserDefaults.standard.setValue(self.email, forKey: "email")
+                UserDefaults.standard.setValue(self.password, forKey: "password")
+                
                 case .failure(let error):
-                    self.isLogged = false
+                    DispatchQueue.main.async {
+                        self.isLogged = false
+                    }
 //                    print(error)
             }
         }
     }
+    
+    func logout(){
+        DispatchQueue.main.async {
+            self.isLogged = false
+        }
+    }
+    
+    func signup(){
+        WebService().signup(name: name, lastname: lastname, email: email, password: password, usertype: ["user"]) { result in
+            
+            switch (result) {
+            case .success(let success):
+                print(success)
+                DispatchQueue.main.async {
+                    self.isLogged = true
+                }
+                UserDefaults.standard.setValue(self.name, forKey: "name")
+                UserDefaults.standard.setValue(self.lastname, forKey: "lastname")
+                UserDefaults.standard.setValue(self.email, forKey: "email")
+                UserDefaults.standard.setValue(self.password, forKey: "password")
+                
+                case .failure(let error):
+                    print(error)
+                    DispatchQueue.main.async {
+                        self.isLogged = false
+                    }
+            }
+        }    }
 }
