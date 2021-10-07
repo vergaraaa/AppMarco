@@ -21,7 +21,7 @@ class LoginViewModel : ObservableObject {
         WebService().login(email: email, password: password) { result in
             print(result)
             switch (result) {
-            case .success(let token):
+	            case .success(let token):
                 DispatchQueue.main.async {
                     self.isLogged = true
                 }

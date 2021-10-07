@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
 		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
 		CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */; };
+		CB28B3D4270E6EBF0027DBA0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */; };
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB28B3D4270E6EBF0027DBA0 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +263,9 @@
 			dependencies = (
 			);
 			name = AppMarco;
+			packageProductDependencies = (
+				CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */,
+			);
 			productName = AppMarco;
 			productReference = CB55A22826DBC858001F88E3 /* AppMarco.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +293,9 @@
 				Base,
 			);
 			mainGroup = CB55A21F26DBC858001F88E3;
+			packageReferences = (
+				CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = CB55A22926DBC858001F88E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -526,6 +534,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB55A22026DBC858001F88E3 /* Project object */;
 }

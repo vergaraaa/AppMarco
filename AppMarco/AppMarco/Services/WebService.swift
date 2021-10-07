@@ -114,4 +114,22 @@ class WebService{
             
         }.resume()
     }
+    
+    func getExpos(completion: @escaping (Result<[Expos], ComunicationError>) -> Void) {
+        
+        guard let url = URL(string: "https://api-marco.herokuapp.com/api/expos/") else {
+            completion(.failure(.custom(errorMessage: "URL is not Correct")))
+            return
+        }
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            print(data!.count)
+            let exposResponse = try! JSONDecoder().decode([Expos].self, from: data!)
+            print(exposResponse)
+            DispatchQueue.main.async {
+                completion(.success(exposResponse))
+            }
+            
+        }.resume()
+    }
 }

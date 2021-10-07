@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ExposDetailView: View {
     
@@ -17,7 +18,7 @@ struct ExposDetailView: View {
             
             ScrollView{
                 VStack{
-                    Image(expo.arrImages[0])
+                    AnimatedImage(url: URL(string: expo.images[0]))
                         .resizable()
                         .scaledToFit()
                         .frame(width: 400)
@@ -25,16 +26,16 @@ struct ExposDetailView: View {
                     
                     VStack{
                         
-                        Text(expo.sNombre)
+                        Text(expo.name)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.bottom, 10)
                             
-                        Text(expo.sAutor)
+                        Text(expo.author)
                             .font(.title3)
                             .padding(.bottom,10)
                         
-                        Text(expo.sFecha)
+                        Text(expo.startDate + " - " + expo.endDate)
                             .font(.callout)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(6)
@@ -43,14 +44,14 @@ struct ExposDetailView: View {
                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color("RosaMarco"))
                             )
                         
-                        Text(expo.sDescripcion)
+                        Text(expo.description)
                             .multilineTextAlignment(.center)
                             .padding()
                         
                         Spacer()
                         
                         NavigationLink(
-                            destination: WebView(html: expo.urlVisita),
+                            destination: WebView(html: expo.virtualTourURL),
                             label: {	
                                 Text("RECORRIDO VIRTUAL")
                                     .font(.callout)
@@ -67,9 +68,9 @@ struct ExposDetailView: View {
         }
     }
 }
-
-struct ExposDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExposDetailView(expo: Expos(sNombre: "nombre", sAutor: "autor", sFecha: "fecha", sDescripcion: "descripcion", urlVisita: "url", arrImages: ["index"]))
-    }
-}
+//
+//struct ExposDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExposDetailView(expo: Expos(id: "id", name: "nombre", author: "autor", startDate: "fecha", endDate: "fecha", description: "descripcion", virtualTourURL: "url", authorCapsuleURL: "url", images: ["index"]))
+//    }
+//}
