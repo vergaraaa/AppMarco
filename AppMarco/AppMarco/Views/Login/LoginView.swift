@@ -18,7 +18,7 @@ struct LoginView: View {
             Color("RosaMarco")
                 .ignoresSafeArea()
             
-            VStack{
+            VStack {
                 Image("LogoMarco")
                     .resizable()
                     .scaledToFit()
@@ -43,24 +43,33 @@ struct LoginView: View {
                     .foregroundColor(.black)
                     .accentColor(.black)
                 
-                Button(action: {
-                    loginVM.login()
+                VStack{
                     
-                }, label: {
-                    Text("Login")
-                        .foregroundColor(.white)
-                })
-                
-                
-                Button(action: {
-                    self.showSignUp.toggle()
-                }, label: {
-                    Text("Sign up")
-                        .foregroundColor(.white)
-                })
-                .sheet(isPresented: $showSignUp, content: {
-                    SignUpView()
-                })
+                    Button(action: {
+                        loginVM.login()
+                        
+                    }, label: {
+                        Text("LOGIN")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(.top, 25)
+                            
+                    })
+                    //.padding(35)
+                    
+                    Button(action: {
+                        self.showSignUp.toggle()
+                    }, label: {
+                        Text("SIGN UP")
+                            .bold()
+                            .padding(5)
+                            .foregroundColor(.white)
+            
+                    })
+                    .sheet(isPresented: $showSignUp, content: {
+                        SignUpView()
+                    })
+                }
 //                NavigationLink(
 //                    destination: MainView(),
 //                    label: {

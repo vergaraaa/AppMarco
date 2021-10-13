@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
-struct ImageOverlay: View{
+/*struct ImageOverlay: View{
     var body: some View{
         ZStack{
             Text("RECORRIDO VIRTUAL")
@@ -18,7 +19,7 @@ struct ImageOverlay: View{
         
         .padding(10)
     }
-}
+}*/
 
 struct HomeView: View {
     
@@ -27,16 +28,21 @@ struct HomeView: View {
     @State var selected : Int = 0
     var height = UIScreen.main.bounds.height
     var width = UIScreen.main.bounds.width
+    var arrImages = ["MarioGraciaTorres", "MarcoTienda", "Eventos-1", "index"]
+    
     var body: some View {
         
         ZStack{
             Color("BgVeige")
-            NavigationLink(
-                destination: WebView(html: "https://www.museomarco.360s.mx/"),
-                label: {
+            //NavigationLink(
+              //  destination: WebView(html: "https://www.museomarco.360s.mx/"),
+                //label: {
                     
                     ScrollView{
                         VStack {
+                            
+                            Spacer(minLength: 25)
+                            
                             
                             Text("EXPOSICIONES ACTUALES")
                                 //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
@@ -47,9 +53,28 @@ struct HomeView: View {
                                 //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                                 .padding()
                             
-                            TabView(selection:$selected){
+                            GeometryReader { proxy in
+                            
+                                TabView {
+                                   
+                                    ForEach(0..<arrImages.count, id: \.self){ item in
+                                        Image(arrImages[0])
+                                            .resizable()
+                                            .scaledToFit()
+                                            .padding()
+                                    }
+                                    
+                                }.tabViewStyle(PageTabViewStyle())
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                                .padding()
+                                .frame(width: proxy.size.width, height: proxy.size.height / 3, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            }
+                            
+                            
+                            
+                               
                                 //Images
-                                ForEach(0...2, id: \.self){
+                               /* ForEach(0...2, id: \.self){
                                     index in
                                     ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
                                         GeometryReader{reader in
@@ -69,23 +94,12 @@ struct HomeView: View {
                                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
                                         
                                         
-                                        //Imagen de Autor de la obra
-                                        Image("Marco1")
-                                            .resizable()
-                                            .aspectRatio(contentMode:  .fill)
-                                            .frame(width:55, height: 55)
-                                            .clipShape(Circle())
-                                            .shadow(color:Color.black.opacity(0.1) , radius: 5, x: 5, y: 5)
-                                            .padding(5)
-                                            .background((Color("RosaMarco")))
-                                            .clipShape(RoundedRectangle(cornerRadius: 2, style: .continuous))
-                                            .offset(x:-15, y:25)
                                     })
                                     .padding(.horizontal,25)
                                     
                                 }//ForEach EXPO
-                            }//TabView
-                            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                                
+                                */
                             .navigationBarTitleDisplayMode(.inline)
                             .toolbar(content: {
                                 ToolbarItem(placement: .principal, content: {
@@ -98,9 +112,9 @@ struct HomeView: View {
                             .padding(0.1)
                             
                             NavigationLink(
-                                destination: WebView(html: "https://www.marco.org.mx/noticias/"),
+                                destination: TiendaView(),
                                 label: {
-                                    Image("Eventos-1")
+                                    Image("MarcoTienda")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: width, height: height/3)
@@ -114,7 +128,7 @@ struct HomeView: View {
                         }//VSTACK
                     } // ScrollView
                 }//ZSTACK
-            )}//NavLink
+          //  )}//NavLink
     }
 }
 
