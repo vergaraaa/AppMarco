@@ -65,7 +65,6 @@ struct TiendaView: View {
             }
 
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
             .toolbar(content: {
                 ToolbarItem(placement: .principal, content: {
                     Image("LogoMarco")

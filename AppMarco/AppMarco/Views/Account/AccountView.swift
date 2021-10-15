@@ -12,7 +12,7 @@ struct AccountView: View {
     @State var offset: CGFloat = 0
     
     @Environment(\.colorScheme) var colorScheme
-    @State var currentTab = "Liked Expos"
+    @State var currentTab = "Exposiciones Favoritas"
     
     @State var titleOffset: CGFloat = 0
     
@@ -115,19 +115,19 @@ struct AccountView: View {
                         //Profile Data
                         
                         VStack(alignment: .leading, spacing: 8, content: {
-                            Text("Edgar Vergara")
+                            Text("Rosa Melano")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
                             
-                            Text("mail.com")
+                            Text("correo.com")
                                 .foregroundColor(.gray)
-                            Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta")
+                            Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER")
                             
                             HStack(spacing: 5){
                                 Text("Expos Likeadas")
                                     .foregroundColor(.gray)
-                                Text("2")
+                                Text("4")
                                     .foregroundColor(.primary)
                                     .fontWeight(.semibold)
                             }
@@ -155,7 +155,7 @@ struct AccountView: View {
                             ScrollView(.horizontal, showsIndicators: false, content: {
                                 
                                 HStack(spacing:5){
-                                    TabButton(title: "Liked Expos", currentTab: $currentTab, animation: animation)
+                                    TabButton(title: "Exposiciones Favoritas", currentTab: $currentTab, animation: animation)
 //                                    TabButton(title: "Otra cosa", currentTab: $currentTab, animation: animation)
                                 }
                                 
