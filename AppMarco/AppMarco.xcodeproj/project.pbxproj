@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F5B2F2719EB72001AB3DD /* BlurView.swift */; };
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC5F5B2F2719EB72001AB3DD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA3F02C26FCECFD00260594 /* AccountView.swift */,
+				AC5F5B2F2719EB72001AB3DD /* BlurView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
 				ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */,
 				CB8717AB2708CE4200BA5F2B /* WebService.swift in Sources */,
+				AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */,
 				CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */,
 				AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */,
 				ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */,
