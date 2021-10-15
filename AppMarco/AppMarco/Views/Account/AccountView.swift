@@ -12,7 +12,7 @@ struct AccountView: View {
     @State var offset: CGFloat = 0
     
     @Environment(\.colorScheme) var colorScheme
-    @State var currentTab = "Likes"
+    @State var currentTab = "Liked Expos"
     
     @State var titleOffset: CGFloat = 0
     
@@ -53,21 +53,21 @@ struct AccountView: View {
                                     .opacity(blurViewOpacity())
                                 
                                 //title view
-                                VStack(spacing: 5){
-                                    Text("Edgar")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                    
-                                    Text("4 Expos Likeadas")
-                                        .foregroundColor(.white)
-                                    
-                                }
-                                .offset(y: 120)
-                                .offset(y:titleOffset > 100 ? 0 : getTitleTextOffset())
-                                .opacity(titleOffset < 100 ? 1 :0)
+//                                VStack(spacing: 4){
+//                                    Text("Edgar")
+//                                        .fontWeight(.bold)
+//                                        .foregroundColor(.white)
+//
+//                                    Text("4 Expos Likeadas")
+//                                        .foregroundColor(.white)
+//
+//                                }
+//                                .offset(y: 120)
+//                                .offset(y:titleOffset > 60 ? 0 : getTitleTextOffset())
+//                                .opacity(titleOffset < 60 ? 1 :0)
                                 
                             }
-                            .clipped()
+                            //.clipped()
                             //stretch header
                             .frame(height:minY > 0 ? 180 + minY:nil)
                             .offset(y:minY > 0 ? -minY : -minY < 80 ? 0: -minY - 80)
@@ -156,7 +156,7 @@ struct AccountView: View {
                                 
                                 HStack(spacing:5){
                                     TabButton(title: "Liked Expos", currentTab: $currentTab, animation: animation)
-                                    TabButton(title: "Otra cosa", currentTab: $currentTab, animation: animation)
+//                                    TabButton(title: "Otra cosa", currentTab: $currentTab, animation: animation)
                                 }
                                 
                             })

@@ -75,23 +75,8 @@ struct MainView: View {
             .navigationBarHidden(true)
             
             NavigationView{
-                TiendaView()
-            }
-            .tabItem {
-                let menuText = Text("Tienda", comment: "Tienda")
-                Label{
-                    menuText
-                } icon: {
-                    Image(systemName: "cart")
-                }
-            }
-            .tag(Tab.tienda)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-            
-            NavigationView{
-                AccountView()
+                MarcoView()
+                
             }
             .tabItem {
                 let menuText = Text("Marco", comment: "Marco")
@@ -104,6 +89,24 @@ struct MainView: View {
             .tag(Tab.marco)
             .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
+            
+            NavigationView{
+                AccountView()
+            }
+            .tabItem {
+                let menuText = Text("Perfil", comment: "Perfil")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "person")
+                }
+            }
+            .tag(Tab.tienda)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            
+            
         }
         //.accentColor(Color("RosaMarco"))
     }
