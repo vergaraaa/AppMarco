@@ -1,16 +1,15 @@
 //
-//  ExposDetailView.swift
+//  FavoritosDetailView.swift
 //  AppMarco
 //
-//  Created by user189854 on 9/7/21.
+//  Created by Eugenio Peña García on 17/10/21.
 //
 
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct ExposDetailView: View {
-    
-    var expo : Expos
+struct FavoritosDetailView: View {
+    var expo : ExposFavoritas
     var body: some View {
         
         ZStack{
@@ -18,7 +17,7 @@ struct ExposDetailView: View {
             
             ScrollView{
                 VStack{
-                    AnimatedImage(url: URL(string: expo.images[0]))
+                    AnimatedImage(url: URL(string: expo.images_wrapped[0]))
                         .resizable()
                         .scaledToFit()
                         .frame(width: 400)
@@ -26,18 +25,16 @@ struct ExposDetailView: View {
                     
                     VStack{
                         
-                        Text(expo.name)
+                        Text(expo.name_wrapped)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.bottom, 10)
                             
-                        Text(expo.author)
+                        Text(expo.author_wrapped)
                             .font(.title3)
                             .padding(.bottom,10)
                         
-                        AddToFavoritosView(filter: expo)
-                        
-                        Text(expo.startDate + " - " + expo.endDate)
+                        Text(expo.startDate_wrapped + " - " + expo.endDate_wrapped)
                             .font(.callout)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(6)
@@ -46,15 +43,15 @@ struct ExposDetailView: View {
                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color("RosaMarco"))
                             )
                         
-                        Text(expo.description)
+                        Text(expo.desc_wrapped)
                             .multilineTextAlignment(.center)
                             .padding()
                         
                         Spacer()
                         
                         NavigationLink(
-                            destination: WebView(html: expo.virtualTourURL),
-                            label: {	
+                            destination: WebView(html: expo.virtualTourURL_wrapped),
+                            label: {
                                 Text("RECORRIDO VIRTUAL")
                                     .font(.callout)
                                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -70,9 +67,10 @@ struct ExposDetailView: View {
         }
     }
 }
-//
-//struct ExposDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExposDetailView(expo: Expos(id: "id", name: "nombre", author: "autor", startDate: "fecha", endDate: "fecha", description: "descripcion", virtualTourURL: "url", authorCapsuleURL: "url", images: ["index"]))
-//    }
-//}
+
+/*struct FavoritosDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        FavoritosDetailView(expo : ExposFavoritas)
+    }
+}
+*/

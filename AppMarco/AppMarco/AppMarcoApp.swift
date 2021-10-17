@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct AppMarcoApp: App {
     
+    let persistenceController = PersistenceController.shared
+    
     @StateObject var loginVM = LoginViewModel()
     
     var body: some Scene {
@@ -17,6 +19,7 @@ struct AppMarcoApp: App {
             if(loginVM.isLogged){
                 MainView()
                     .environmentObject(loginVM)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
             else{
                 LoginView()

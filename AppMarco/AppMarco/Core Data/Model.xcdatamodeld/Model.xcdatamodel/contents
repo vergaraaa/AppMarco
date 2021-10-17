@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ExposFavoritas" representedClassName="ExposFavoritas" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="authorCapsuleURL" optional="YES" attributeType="String"/>
+        <attribute name="curatorship" optional="YES" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="museography" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <attribute name="technique" optional="YES" attributeType="String"/>
+        <attribute name="totalPieces" optional="YES" attributeType="String"/>
+        <attribute name="virtualTourURL" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="ExposFavoritas" positionX="-54" positionY="0" width="128" height="239"/>
+    </elements>
+</model>

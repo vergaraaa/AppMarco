@@ -123,15 +123,7 @@ struct AccountView: View {
                             Text("correo.com")
                                 .foregroundColor(.gray)
                             Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER")
-                            
-                            HStack(spacing: 5){
-                                Text("Expos Likeadas")
-                                    .foregroundColor(.gray)
-                                Text("4")
-                                    .foregroundColor(.primary)
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(.top, 8)
+
                         })
                         .overlay(
                             GeometryReader{proxy -> Color in
@@ -189,15 +181,8 @@ struct AccountView: View {
                             
                             //expos ejemplo
                             
-                            LikeView(note: "Was poppin", expoImg: "2")
-                            
-                            Divider()
-                            
-                            ForEach(1...3, id: \.self){_
-                                in LikeView(note: sampleText)
-                                
-                                Divider()
-                            }
+                            FavoritosView()
+                                .scaledToFill()
                             
                         }
                         .padding(.top)

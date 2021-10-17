@@ -90,6 +90,7 @@ struct MainView: View {
             .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
             
+            
             NavigationView{
                 AccountView()
             }
@@ -101,6 +102,20 @@ struct MainView: View {
                     Image(systemName: "person")
                 }
             }
+            
+            /*
+            NavigationView{
+                FavoritosView()
+            }
+            .tabItem {
+                let menuText = Text("Favoritos", comment: "Favoritos")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "star.fill")
+                }
+            }*/
+            
             .tag(Tab.tienda)
             .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
