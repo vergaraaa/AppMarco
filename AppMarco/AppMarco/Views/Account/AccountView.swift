@@ -122,7 +122,7 @@ struct AccountView: View {
                             
                             Text("correo.com")
                                 .foregroundColor(.gray)
-                            Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER")
+                            Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER test")
 
                         })
                         .overlay(
