@@ -50,6 +50,7 @@ struct HomeView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
+                                    
                                 //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                                 .padding()
                             
@@ -62,6 +63,17 @@ struct HomeView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 400, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                         .cornerRadius(10.0)
+                                        .overlay(
+                                            ZStack{
+                                                Text("Eventos")
+                                                    .font(.callout)
+                                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                                    .padding(6)
+                                                    .foregroundColor(.white)
+                                            }.background(Color("RosaMarco"))
+                                            .cornerRadius(10.0)
+                                            .padding(6), alignment: .bottomLeading
+                                        )
                                 })
                 
                             Spacer(minLength: 50)
@@ -79,6 +91,17 @@ struct HomeView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: width, height: height/3)
+                                        .overlay(
+                                            ZStack{
+                                                Text("Tienda")
+                                                    .font(.callout)
+                                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                                    .padding(6)
+                                                    .foregroundColor(.white)
+                                            }.background(Color("RosaMarco"))
+                                            .cornerRadius(10.0)
+                                            .padding(6), alignment: .bottomLeading
+                                        )
                                         //.shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
                                         //.shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
                                         .cornerRadius(0.1)
@@ -99,6 +122,8 @@ struct HomeView: View {
 
                             Group{
                                 Text("Recorre las extraordinarias instalaciones de la expo más reciente del Museo y vive la experiencia de visitar MARCO desde cualquier parte.")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
                                     //.padding(20)
                                     //.scaledToFill()
                                     //.minimumScaleFactor(0.5)
@@ -118,7 +143,7 @@ struct HomeView: View {
                                         .cornerRadius(10)
                                         .overlay(
                                             ZStack{
-                                                Text("RECORRIDO VIRTUAL")
+                                                Text("Recorrido Virtual")
                                                     .font(.callout)
                                                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                                     .padding(6)

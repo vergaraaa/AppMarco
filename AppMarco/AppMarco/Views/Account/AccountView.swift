@@ -82,7 +82,7 @@ struct AccountView: View {
                             Image("2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 100, height: 100)
+                                .frame(width: 200, height: 200)
                                 .clipShape(Rectangle())
                                 .padding(8)
                                 //.background()
@@ -115,14 +115,14 @@ struct AccountView: View {
                         //Profile Data
                         
                         VStack(alignment: .leading, spacing: 8, content: {
-                            Text("Rosa Melano")
+                            Text("Edgar Vergara")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
                             
                             Text("correo.com")
                                 .foregroundColor(.gray)
-                            Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER test")
+                           
 
                         })
                         
@@ -142,7 +142,7 @@ struct AccountView: View {
                             Divider()
                         }
                         .padding(.top,30)
-                        .background(Color("BgVeige"))
+                       // .background(Color("BgVeige"))
                         //editable
                         .offset(y: tabBarOffset < 90 ? -tabBarOffset + 90 :0)
                         .overlay (
