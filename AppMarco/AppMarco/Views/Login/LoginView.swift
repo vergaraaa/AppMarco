@@ -36,7 +36,7 @@ struct LoginView: View {
                     .foregroundColor(.black)
                     .accentColor(.black)
                 
-                SecureField("Password", text: $loginVM.password)
+                SecureField("Contraseña", text: $loginVM.password)
                     .padding()
                     .background(Color(.white))
                     .cornerRadius(15)
@@ -49,7 +49,7 @@ struct LoginView: View {
                         loginVM.login()
                         
                     }, label: {
-                        Text("LOGIN")
+                        Text("Iniciar Sesión")
                             .bold()
                             .foregroundColor(.white)
                             .padding(.top, 25)
@@ -60,7 +60,7 @@ struct LoginView: View {
                     Button(action: {
                         self.showSignUp.toggle()
                     }, label: {
-                        Text("SIGN UP")
+                        Text("Registrar")
                             .bold()
                             .padding(5)
                             .foregroundColor(.white)

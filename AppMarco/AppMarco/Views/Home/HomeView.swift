@@ -97,10 +97,16 @@ struct HomeView: View {
                                 .cornerRadius(25)
                                 .frame(width: 200, height: 50, alignment: .center)
 
-                            
-                            Text("Recorre las extraordinarias instalaciones de la expo más reciente del Museo y vive la experiencia de visitar MARCO desde cualquier parte.")
-                                .padding(20)
-                                //.padding(.vertical, 20)
+                            Group{
+                                Text("Recorre las extraordinarias instalaciones de la expo más reciente del Museo y vive la experiencia de visitar MARCO desde cualquier parte.")
+                                    //.padding(20)
+                                    //.scaledToFill()
+                                    //.minimumScaleFactor(0.5)
+                                    //.lineLimit(1)
+                                    //.padding(.vertical, 20)
+                            }
+                            .padding(.horizontal, 30)
+                            .padding(.vertical, 20)
                            
                             NavigationLink(
                                 destination: WebView(html: "https://www.museomarco.360s.mx/"),
