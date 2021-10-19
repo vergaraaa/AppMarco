@@ -110,8 +110,8 @@ struct AccountView: View {
                                     .background(Capsule().stroke(Color.pink,lineWidth: 1.5))
                             })
                         }
-                        .padding(.top,-25)
-                        .padding(.bottom, -10)
+                        //.padding(.top,-25)
+                        //.padding(.bottom, -10)
                         //Profile Data
                         
                         VStack(alignment: .leading, spacing: 8, content: {
@@ -125,20 +125,7 @@ struct AccountView: View {
                             Text("Aqui se supone que va un mini texto, bio o what ever se puede quitar si no les gusta SHUTUP AND BENDOVER")
 
                         })
-                        .overlay(
-                            GeometryReader{proxy -> Color in
-                                
-                                let minY = proxy.frame(in: .global).minY
-                                
-                                DispatchQueue.main.async{
-                                    self.titleOffset = minY
-                                }
-                                return Color.clear
-                            }
-                            .frame(width: 0, height: 0)
-                            ,alignment: .top
                         
-                        )
                         
                         //menusito
                         VStack(spacing:0){
@@ -195,7 +182,9 @@ struct AccountView: View {
                 }
             })
             .ignoresSafeArea(.all, edges:.top)
-        }
+        
+            
+    }
     
     func getTitleTextOffset() -> CGFloat{
         

@@ -24,6 +24,8 @@ class ExpoViewModel: ObservableObject{
             }
         }
     }
+}
+    
 //    func LoadInfo(){
 //        var expo : Expos
 //
@@ -34,4 +36,4 @@ class ExpoViewModel: ObservableObject{
 //        expo = Expos(sNombre: "Index", sAutor: "MARCO y FF Projects", sFecha: "16 OCT - AGO 2021", sDescripcion: "A raíz de la fuerte crisis económica que enfrentan los museos a nivel internacional, y derivado de la necesidad de buscar nuevos posicionamientos de las producciones artísticas actuales, MARCO pensó en el patio de las esculturas como una posibilidad de generar nexos con la comunidad artística de Monterrey que se ha preocupado por buscar un lugar en el espacio institucional global. Por tal motivo, su directora Taiyana Pimentel en colaboración con los Miembros del Consejo Directivo, pensaron en este proyecto.",urlVisita: "https://www.patiomarco.360s.mx/" ,arrImages: ["index"])
 //        arrExpos.append(expo)
 //    }
-}
+

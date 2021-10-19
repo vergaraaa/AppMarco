@@ -28,7 +28,7 @@ struct HomeView: View {
     @State var selected : Int = 0
     var height = UIScreen.main.bounds.height
     var width = UIScreen.main.bounds.width
-    var arrImages = ["MarioGarciaTorres", "MarcoTienda", "Eventos-1", "index"]
+    //var arrImages = ["https://www.marco.org.mx/wp-content/uploads/2021/10/EventON-Talleres-Lego-Octubre.jpg", "https://www.marco.org.mx/wp-content/uploads/2021/08/EventON-Cafe-Lit-2021_Individuales5-y-12-de-octubre.jpg", "https://www.marco.org.mx/wp-content/uploads/2021/08/EventON-Semana-de-arte-en-verano-1.png", "https://www.marco.org.mx/wp-content/uploads/2021/10/EvenTON-Conocimiento-y-Anti-conocimiento.png", "https://www.marco.org.mx/wp-content/uploads/2021/08/EvenTON-Invitacion-Sustentabilidad-1.png"]
     
     var body: some View {
         
@@ -44,7 +44,7 @@ struct HomeView: View {
                             Spacer(minLength: 25)
                             
                             
-                            Text("EXPOSICIONES ACTUALES")
+                            Text("EVENTOS")
                                 //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -53,38 +53,19 @@ struct HomeView: View {
                                 //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                                 .padding()
                             
-                            //GeometryReader { proxy in
-                            
-                                TabView {
-                                   
-                                    ForEach(0..<arrImages.count, id: \.self){ item in
-                                        Image(arrImages[item])
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 400, height: 350)
-                                            .padding()
-                                            
-                                    }
-                                    
-                                }.tabViewStyle(PageTabViewStyle())
-                                .frame(width: 400, height: 180)
-                                /*.clipShape(RoundedRectangle(cornerRadius: 5))
-                                .padding()
-                                .frame(width: proxy.size.width, height: proxy.size.height / 3, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                }*/
-
-                            
-                            .navigationBarTitleDisplayMode(.inline)
-                            .toolbar(content: {
-                                ToolbarItem(placement: .principal, content: {
-                                    Image("LogoMarco")
+                            NavigationLink(
+                                destination: EventosView(),
+                                label: {
+                                    AnimatedImage(url: URL(string: "https://www.marco.org.mx/wp-content/uploads/2021/08/EventON-Semana-de-arte-en-verano-1.png"))
                                         .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 20)
+                                        .scaledToFill()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 400, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                        .cornerRadius(10.0)
                                 })
-                            })
-                            .padding(20)
-                            Divider()
+                
+                            Spacer(minLength: 50)
+                            
                             Text("TIENDA")
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -98,34 +79,64 @@ struct HomeView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: width, height: height/3)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
+                                        //.shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
+                                        //.shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
                                         .cornerRadius(0.1)
                                     
                                     
                                 })
+                            
                             Spacer()
                             
-                            Text("EVENTOS")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.center)
+                            Text("EXPLORA")
+                                .bold()
+                                .padding()
+                                .clipShape(Capsule())
+                                .foregroundColor(.white)
+                                .background(Color("RosaMarco"))
+                                .cornerRadius(25)
+                                .frame(width: 200, height: 50, alignment: .center)
+
                             
+                            Text("Recorre las extraordinarias instalaciones de la expo más reciente del Museo y vive la experiencia de visitar MARCO desde cualquier parte.")
+                                .padding(20)
+                                //.padding(.vertical, 20)
+                           
                             NavigationLink(
-                                destination: WebView(html: "https://www.marco.org.mx/noticias/"),
+                                destination: WebView(html: "https://www.museomarco.360s.mx/"),
                                 label: {
-                                    Image("Eventos-1")
+                                    Image("palomaMarco")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(width: width, height: height/3)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
-                                        .cornerRadius(0.1)
-                                    
-                                    
+                                        .frame(width: 400)
+                                        .cornerRadius(10)
+                                        .overlay(
+                                            ZStack{
+                                                Text("RECORRIDO VIRTUAL")
+                                                    .font(.callout)
+                                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                                    .padding(6)
+                                                    .foregroundColor(.white)
+                                            }.background(Color("RosaMarco"))
+                                            .cornerRadius(10.0)
+                                            .padding(6), alignment: .bottomLeading
+                                        )
+
                                 })
+                                .padding()
                             
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar(content: {
+                                    ToolbarItem(placement: .principal, content: {
+                                        Image("LogoMarco")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 20)
+                                    })
+                                })
+                                .padding(20)
+                            
+                           
                         }//VSTACK
                     } // ScrollView
                 }//ZSTACK
@@ -140,7 +151,7 @@ struct HomeView: View {
 //        HomeView()
 //    }
 //}
-
+///Users/user189854/Desktop/AppMarco/AppMarco/AppMarco/Views/Web
 //Images
 /* ForEach(0...2, id: \.self){
     index in

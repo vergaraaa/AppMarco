@@ -45,7 +45,7 @@ struct SignUpResponse: Codable{
 class WebService{
     func login(email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
         
-        guard let url = URL(string: "https://api-marco.herokuapp.com/api/users/login") else {
+        guard let url = URL(string: "http://100.24.228.237:10021/api/users/login") else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
@@ -81,7 +81,7 @@ class WebService{
     
     func signup(name: String, lastname: String, email: String, password: String, usertype: [String], completion: @escaping (Result<Bool, ComunicationError>) -> Void) {
         
-        guard let url = URL(string: "https://api-marco.herokuapp.com/api/users/") else {
+        guard let url = URL(string: "http://100.24.228.237:10021/api/users/") else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
@@ -116,20 +116,39 @@ class WebService{
     }
     
     func getExpos(completion: @escaping (Result<[Expos], ComunicationError>) -> Void) {
-        
-        guard let url = URL(string: "https://api-marco.herokuapp.com/api/expos/") else {
-            completion(.failure(.custom(errorMessage: "URL is not Correct")))
-            return
-        }
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            print(data!.count)
-            let exposResponse = try! JSONDecoder().decode([Expos].self, from: data!)
-            print(exposResponse)
-            DispatchQueue.main.async {
-                completion(.success(exposResponse))
-            }
             
+            guard let url = URL(string: "http://100.24.228.237:10021/api/expos") else {
+                completion(.failure(.custom(errorMessage: "URL is not Correct")))
+                return
+            }
+
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                print(data!.count)
+                let exposResponse = try! JSONDecoder().decode([Expos].self, from: data!)
+                print(exposResponse)
+                DispatchQueue.main.async {
+                    completion(.success(exposResponse))
+                }
+                
         }.resume()
+    }
+    
+    
+    func getEventos(completion: @escaping (Result<[Eventos], ComunicationError>) -> Void) {
+            
+            guard let url = URL(string: "http://100.24.228.237:10021/api/activities/month") else {
+                completion(.failure(.custom(errorMessage: "URL is not Correct")))
+                return
+            }
+
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                print(data!.count)
+                let eventosResponse = try! JSONDecoder().decode([Eventos].self, from: data!)
+                print(eventosResponse)
+                DispatchQueue.main.async {
+                    completion(.success(eventosResponse))
+                }
+                
+            }.resume()  
     }
 }

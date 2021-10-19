@@ -36,7 +36,11 @@
 		DFBDED69271C96B7008E2A39 /* FavoritosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */; };
 		DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */; };
 		DFBDED6F271CA1B6008E2A39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6E271CA1B6008E2A39 /* Extensions.swift */; };
+		F36BAA25271D162800980302 /* EventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA24271D162800980302 /* EventosView.swift */; };
+		F36BAA28271D47DA00980302 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA27271D47DA00980302 /* Eventos.swift */; };
+		F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A60899271F24EF0091048E /* EventoDetailView.swift */; };
 		F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB958026E828FA0078258C /* ExposDetailView.swift */; };
+		F3E80089271E6C0C00AB3334 /* EventosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */; };
 		FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7426DFFC960080CF93 /* HomeView.swift */; };
 		FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7626E0008A0080CF93 /* ExposView.swift */; };
 		FB054D7926E000920080CF93 /* BoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7826E000920080CF93 /* BoletosView.swift */; };
@@ -78,7 +82,11 @@
 		DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosDetailView.swift; sourceTree = "<group>"; };
 		DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritosView.swift; sourceTree = "<group>"; };
 		DFBDED6E271CA1B6008E2A39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F36BAA24271D162800980302 /* EventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosView.swift; sourceTree = "<group>"; };
+		F36BAA27271D47DA00980302 /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
+		F3A60899271F24EF0091048E /* EventoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDetailView.swift; sourceTree = "<group>"; };
 		F3CB958026E828FA0078258C /* ExposDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposDetailView.swift; sourceTree = "<group>"; };
+		F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosViewModel.swift; sourceTree = "<group>"; };
 		FB054D7426DFFC960080CF93 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB054D7626E0008A0080CF93 /* ExposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposView.swift; sourceTree = "<group>"; };
 		FB054D7826E000920080CF93 /* BoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosView.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 				ACD2900C26E5D12A0053CF6D /* Fonts */,
 				FB9B68AD26E67CB000BCC7CF /* Models */,
 				CBFAFA6A26E2DD5F00082696 /* Modifiers */,
+				CB11FA4F270BACD800C6AD66 /* Web */,
 				CB8717A32708CB1A00BA5F2B /* Services */,
 				CB9035412708EBED00B12866 /* Views */,
 				CB8717A52708CB4E00BA5F2B /* ViewModels */,
@@ -182,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA5659A26E68740003883CC /* ExpoViewModel.swift */,
+				F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */,
 				CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
@@ -190,7 +200,6 @@
 		CB9035412708EBED00B12866 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB11FA4F270BACD800C6AD66 /* Web */,
 				CB9035462708ECCB00B12866 /* Account */,
 				CB9035442708EC8000B12866 /* Boletos */,
 				CB9035432708EC7100B12866 /* Expos */,
@@ -208,6 +217,8 @@
 				ACD2901A26E5E6920053CF6D /* RVView.swift */,
 				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
 				FB054D7426DFFC960080CF93 /* HomeView.swift */,
+				F36BAA24271D162800980302 /* EventosView.swift */,
+				F3A60899271F24EF0091048E /* EventoDetailView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -275,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA5659126E686B4003883CC /* Expos.swift */,
+				F36BAA27271D47DA00980302 /* Eventos.swift */,
 				ACD2901726E5E1F20053CF6D /* RVModel.swift */,
 				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 				CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */,
@@ -366,12 +378,15 @@
 				CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */,
 				DFBDED65271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift in Sources */,
 				F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */,
+				F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */,
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */,
+				F36BAA25271D162800980302 /* EventosView.swift in Sources */,
 				DFBDED69271C96B7008E2A39 /* FavoritosDetailView.swift in Sources */,
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
+				F36BAA28271D47DA00980302 /* Eventos.swift in Sources */,
 				ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */,
 				DFBDED5F271C8E13008E2A39 /* Model.xcdatamodeld in Sources */,
 				CB8717AB2708CE4200BA5F2B /* WebService.swift in Sources */,
@@ -382,6 +397,7 @@
 				FB054D7926E000920080CF93 /* BoletosView.swift in Sources */,
 				DFBDED64271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift in Sources */,
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
+				F3E80089271E6C0C00AB3334 /* EventosViewModel.swift in Sources */,
 				DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */,
 				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
 				AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */,

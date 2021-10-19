@@ -30,6 +30,7 @@ struct Expos: Codable, Identifiable {
     var virtualTourURL : String
     var authorCapsuleURL : String
     var images : [String]
+    var audio : String
     var curatorship : String
     var museography : String
     var location : String
@@ -46,6 +47,7 @@ struct Expos: Codable, Identifiable {
         case virtualTourURL
         case authorCapsuleURL
         case images
+        case audio
         case curatorship
         case museography
         case location

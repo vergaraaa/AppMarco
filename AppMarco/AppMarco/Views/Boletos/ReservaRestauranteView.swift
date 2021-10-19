@@ -18,9 +18,10 @@ struct ReservaRestauranteView: View {
                     .font(.title)
                     .bold()
                 
-                Image(systemName: "leaf")
+                Image("restaurantSymbol")
+                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     .resizable()
-                    .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 85, height: 85, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .foregroundColor(Color("RosaMarco"))
                 
                 Text("Reserva tu mesa y consulta nuestro delicioso menú")
