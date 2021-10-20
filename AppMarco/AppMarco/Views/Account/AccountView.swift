@@ -82,23 +82,15 @@ struct AccountView: View {
                             Image("2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 200, height: 200)
+                                .frame(width: 100, height: 100)
                                 .clipShape(Rectangle())
                                 .padding(8)
                                 //.background()
                                 .clipShape(Rectangle())
+                                .border(Color.black, width: 9)
                                 .offset(y: offset < 0 ? getOffset() - 20: -20)
                                 .scaleEffect(getScale())
                             Spacer()
-                            
-                            Button(action: {}, label: {
-                                Text("Edit Profile")
-                                    .foregroundColor(Color("RosaMarco"))
-                                    .padding(.vertical,10)
-                                    .padding(.horizontal)
-                                    .background(Capsule().stroke(Color.pink,lineWidth: 1.5))
-                            })
-                            
                             
                             Button(action: {
                                 loginVM.logout()
@@ -107,7 +99,8 @@ struct AccountView: View {
                                     .foregroundColor(Color("RosaMarco"))
                                     .padding(.vertical,10)
                                     .padding(.horizontal)
-                                    .background(Capsule().stroke(Color.pink,lineWidth: 1.5))
+                                    .background(Capsule()
+                                    .stroke(Color.black,lineWidth: 1.5))
                             })
                         }
                         //.padding(.top,-25)
@@ -119,6 +112,7 @@ struct AccountView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
+                                
                             
                             Text("correo.com")
                                 .foregroundColor(.gray)

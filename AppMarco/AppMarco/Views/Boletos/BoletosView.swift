@@ -44,7 +44,7 @@ struct BoletosView: View {
                     .padding()
                 
                 NavigationLink(
-                    destination: ComprarBoletosView(),
+                    destination: WebView(html: "http://factura.marco.org.mx/tickets_marco/validar_usuario.aspx"),
                     label: {
                         Text("COMPRAR BOLETOS")
                             .bold()
@@ -61,6 +61,22 @@ struct BoletosView: View {
                     destination: ReservaRestauranteView(),
                     label: {
                         Text("RESTAURANTE")
+                            .bold()
+                            .font(.title2)
+                            .padding()
+                            .clipShape(Capsule())
+                            .foregroundColor(.black)
+                            .background(Color(.white))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color("RosaMarco"), lineWidth: 3)
+                                )
+                    })
+                
+                NavigationLink(
+                    destination: ReservaGuiaView(),
+                    label: {
+                        Text("Agendar tu Visita")
                             .bold()
                             .font(.title2)
                             .padding()
