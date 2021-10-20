@@ -13,6 +13,7 @@
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
+		ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE49D0F2720865500D8A512 /* ReservasModel.swift */; };
 		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
 		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
 		CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */; };
@@ -60,6 +61,7 @@
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
+		ACE49D0F2720865500D8A512 /* ReservasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasModel.swift; sourceTree = "<group>"; };
 		AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaRestauranteView.swift; sourceTree = "<group>"; };
 		AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarBoletosView.swift; sourceTree = "<group>"; };
 		CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 				CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */,
 				AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */,
+				ACE49D0F2720865500D8A512 /* ReservasModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */,
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
+				ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */,
 				F36BAA25271D162800980302 /* EventosView.swift in Sources */,

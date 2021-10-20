@@ -15,6 +15,7 @@ class LoginViewModel : ObservableObject {
     var lastname : String = UserDefaults.standard.string(forKey: "lastname") ?? ""
     var usertype: [String] = [""]
     @Published var isLogged : Bool = false
+    @Published var shortAlertLoginFail : Bool = false
     
     func login() {
         
@@ -31,6 +32,7 @@ class LoginViewModel : ObservableObject {
                 case .failure(let error):
                     DispatchQueue.main.async {
                         self.isLogged = false
+                        self.shortAlertLoginFail = true
                     }
 //                    print(error)
             }

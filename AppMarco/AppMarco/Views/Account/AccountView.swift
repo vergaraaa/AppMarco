@@ -16,6 +16,7 @@ struct AccountView: View {
     
     @State var titleOffset: CGFloat = 0
     
+    var ColorR = Color("RosaMarco")
     //slider animation
     @Namespace var animation
     @State var tabBarOffset: CGFloat = 0
@@ -92,6 +93,16 @@ struct AccountView: View {
                                 .scaleEffect(getScale())
                             Spacer()
                             
+                            VStack(alignment: .leading, spacing: 8, content: {
+                                Text("Edgar Vergara")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.primary)
+                                
+                                Text("correo.com")
+                                    .foregroundColor(.gray)
+                            })
+                                
                             Button(action: {
                                 loginVM.logout()
                                 }, label: {
@@ -100,25 +111,18 @@ struct AccountView: View {
                                     .padding(.vertical,10)
                                     .padding(.horizontal)
                                     .background(Capsule()
-                                    .stroke(Color.black,lineWidth: 1.5))
+                                    .stroke(ColorR,lineWidth: 1))
                             })
                         }
                         //.padding(.top,-25)
                         //.padding(.bottom, -10)
                         //Profile Data
                         
-                        VStack(alignment: .leading, spacing: 8, content: {
-                            Text("Edgar Vergara")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.primary)
-                                
-                            
-                            Text("correo.com")
-                                .foregroundColor(.gray)
-                           
-
-                        })
+//                        VStack(alignment: .leading, spacing: 8, content: {
+//
+//
+//
+//                        })
                         
                         
                         //menusito
@@ -129,7 +133,8 @@ struct AccountView: View {
                                 
                                 HStack(spacing:5){
                                     TabButton(title: "Exposiciones Favoritas", currentTab: $currentTab, animation: animation)
-//                                    TabButton(title: "Otra cosa", currentTab: $currentTab, animation: animation)
+                                        .foregroundColor(ColorR)
+                                    TabButton(title: "Mis visitas", currentTab: $currentTab, animation: animation)
                                 }
                                 
                             })
