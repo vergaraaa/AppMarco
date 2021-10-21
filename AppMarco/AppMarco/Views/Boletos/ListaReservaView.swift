@@ -14,10 +14,40 @@ struct ListaReservaView: View {
     var body: some View {
         
         VStack{
-            Text("Hi")
+            
+            List{
+                ForEach(reservas){
+                    reserva in
+                    
+                    HStack{
+                        Text(reserva.guide.name)
+                        VStack(alignment: .leading, spacing: 10){
+
+                            
+                            Text(("Dia: \(reserva.date)"))
+                                .frame(maxHeight: 100, alignment: .top)
+                            Text(("Hora: \(reserva.hour)"))
+                                .frame(maxHeight: 100, alignment: .top)
+                            Text("Guia: " + (reserva.guide.name))
+                                .fontWeight(.semibold)
+                                //.foregroundColor(.grey)
+
+                            }
+                    }
+                    
+                }
+            }
+            .onAppear(){
+                reservaVM.getReservas{(result) in
+                DispatchQueue.main.async{
+                    self.reservas = result
+                }
+            }
         }
+        }
+    }
         //var note: String
-        //var boletoImg: String?
+//        var boletoImg: String?
 //        VStack{
 //            List{
 //                ForEach(reservas){
@@ -30,24 +60,7 @@ struct ListaReservaView: View {
 ////                            .frame(width:55, height:55)
 ////                            .clipShape(Rectangle())
 //
-//                        VStack(alignment: .leading, spacing: 10){
-//
-//                            Text("Reserva de")
-//                                .fontWeight(.bold)
-//                                .foregroundColor(.primary)
-//                                    +
-//                            Text(reserva.email)
-//                                    .foregroundColor(.gray)
-//
-//                            Text("Cantidad: " + (reserva.cantPer))
-//                                .frame(maxHeight: 100, alignment: .top)
-//                            Text(("Dia: \(reserva.fecha)"))
-//                                .frame(maxHeight: 100, alignment: .top)
-//                            Text("Guia: " + (reserva.guia))
-//                                .fontWeight(.semibold)
-//                                .foregroundColor(.grey)
-//
-//                            })
+//                       )
 //                        }
 //
 //                    }
@@ -57,15 +70,11 @@ struct ListaReservaView: View {
 //                       )
 //                }
 //            }
-//            .onAppear(){
-//                reservaVM.getReservas{(result) in
-//                    DispatchQueue.main.async{
-//                        self.reservas = result
-//                    }
+//
 //                }
 //            }
-//        }
-    }
+////        }
+//    }
 }
 
 struct ListaReservaView_Previews: PreviewProvider {

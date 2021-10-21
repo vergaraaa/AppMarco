@@ -41,9 +41,9 @@ class ReservaViewModel : ObservableObject {
 
     func getReservas(completion: @escaping ([ReservasModel])->()) {
 
-        let username = UserDefaults.standard.string(forKey: "username") ?? " "
+        let id = UserDefaults.standard.string(forKey: "id") ?? " "
 
-        WebService().getReservas(username: username) { result in
+        WebService().getReservas(id: id) { result in
             switch result {
                 case .success(let reservas):
                         print("Obtuvo las reservas")
@@ -58,11 +58,10 @@ class ReservaViewModel : ObservableObject {
         }
     }
     
-    func getReservasFechas() {
-
-        let username = UserDefaults.standard.string(forKey: "username") ?? " "
-
-        WebService().getReservas(username: username) { result in
+    func getReservasFechas(fecha : Date , completion: @escaping ([ReservasModel])->()) {
+        
+        
+        WebService().getReservasFechas(fecha: fecha) { result in
             switch result {
                 case .success(let reservas):
                         print("Obtuvo las reservas")

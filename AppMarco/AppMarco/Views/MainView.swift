@@ -92,7 +92,8 @@ struct MainView: View {
             
             
             NavigationView{
-                AccountView()
+                ReservaGuiaView()
+                //AccountView()
             }
             .tabItem {
                 let menuText = Text("Perfil", comment: "Perfil")

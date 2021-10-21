@@ -7,17 +7,17 @@ struct ReservaGuiaView: View {
     @State var fecha_nueva : Date = Date()
     var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
     @State var cantPer : Int = 1
-    @State var hora_elegida: String = "10:00 AM"
+    //@State var hora_elegida: String = "10:00 AM"
     //fecha  dia hora usuario
-    var horas_disponibles  = ["10:00 AM", "11:30 AM", "1:00 PM", "2:30 PM", "4:00 PM", "5:30 PM"]
-   
-
+    @State var ReservacionesDisponibles = [ReservasModel]()
+    
     
     var body: some View {
         
         VStack{
             Form {
                 DatePicker(
+                    "Fecha de Visita Guiada",
                     selection: $fecha_nueva,
                     displayedComponents: [.date]
                         
@@ -25,25 +25,19 @@ struct ReservaGuiaView: View {
                     //lanzar llamada view model
                     //getReservas()
                 )
-                .onChange(of: fecha, perform: { value in
-                     
-                    reservaVM.getReservasDisponibles(date: fecha) { (horarios) in
-                            DispatchQueue.main.async {
-                            self.horariosDisponibles = horarios
-                            }
+                .onChange(of: fecha_nueva, perform: { value in
+                    reservaVM.getReservasFechas(fecha: fecha_nueva) { (result) in
+                        DispatchQueue.main.async {
+                            self.ReservacionesDisponibles = result
+                        }
                     }
                 })
-                {
-                    Text("Fecha")
+              
+                ForEach(ReservacionesDisponibles){ item in
+                    Text(item.hour)
+                    
                 }
                 
-                Picker("Hora", selection: $hora_elegida)
-                
-                {
-                    ForEach(horas_disponibles, id: \.self) {
-                        Text($0)
-                    }
-                }
                
                 
 

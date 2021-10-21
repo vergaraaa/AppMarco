@@ -8,7 +8,7 @@
 import Foundation
 
 class LoginViewModel : ObservableObject {
-    
+    var id : String = UserDefaults.standard.string(forKey: "id") ?? ""
     var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
     var password : String = UserDefaults.standard.string(forKey: "password") ?? ""
     var name : String = UserDefaults.standard.string(forKey: "name") ?? ""
@@ -26,6 +26,7 @@ class LoginViewModel : ObservableObject {
                 DispatchQueue.main.async {
                     self.isLogged = true
                 }
+                UserDefaults.standard.setValue(self.id, forKey: "id")
                 UserDefaults.standard.setValue(self.email, forKey: "email")
                 UserDefaults.standard.setValue(self.password, forKey: "password")
                 

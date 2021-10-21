@@ -11,23 +11,32 @@ struct ReservasResponse : Decodable, Encodable {
     
 }
 
+struct GuideModel : Decodable, Encodable {
+    var id : String
+    var name : String
+    var email : String
+}
+
 struct ReservasModel : Identifiable, Decodable, Encodable {
     
     var id  : String
-    var fecha : Date
-    var hora : String
-    var usuario: String
+    var date : Date
+    var hour : String
+    var user: String
     //var idG : String
-    var guia: String
-    var canPer: Int
-    
+    var guide: GuideModel
+    var spots: Int
+    var available : Bool
     
     enum CodingKeys : String, CodingKey{
         case id = "_id"
-        case fecha
-        case hora
-        case usuario
-        case guia
-        case canPer
+        case date
+        case hour
+        case user
+        case guide
+        case spots
+        case available
     }
 }
+
+

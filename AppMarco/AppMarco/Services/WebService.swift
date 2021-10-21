@@ -38,6 +38,7 @@ struct AddReservaResponse: Codable{
 }
 
 struct LoginResponse: Codable{
+    let id: String?
     let message: String?
     let token: String?
     let usertype: [String]?
@@ -145,9 +146,9 @@ class WebService{
         }.resume()
     }
 
-    func getReservas(username : String, completion: @escaping (Result<ReservasResponse, ComunicationError>) -> Void) {
+    func getReservas(id : String, completion: @escaping (Result<ReservasResponse, ComunicationError>) -> Void) {
 
-        guard let url = URL(string: "http://100.24.228.237:10021/" + username) else {
+        guard let url = URL(string: "http://100.24.228.237:10021/api/reservations/user/" + id) else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
@@ -171,7 +172,7 @@ class WebService{
         formatter1.dateFormat = "yyyy-MM-dd"
         let fechaNueva = formatter1.string(from: fecha)
         
-        guard let url = URL(string: "http://100.24.228.237:10021/reservations/" + fechaNueva) else {
+        guard let url = URL(string: "http://100.24.228.237:10021/reservations/available/" + fechaNueva) else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
