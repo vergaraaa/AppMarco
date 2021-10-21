@@ -23,9 +23,7 @@ struct ExposView: View {
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .padding()
-                    
-                    Spacer()
-                    
+                                        
                     VStack{
                         ForEach(expo.expos){item in
                             
@@ -59,9 +57,7 @@ struct ExposView: View {
                             Text(item.author)
                                 .font(.title3)
                                 .padding(.bottom,5)
-                            
-                            
-                            Spacer()
+         
                             
                         }
                     }

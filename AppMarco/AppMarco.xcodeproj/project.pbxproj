@@ -36,6 +36,7 @@
 		DFBDED69271C96B7008E2A39 /* FavoritosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */; };
 		DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */; };
 		DFBDED6F271CA1B6008E2A39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6E271CA1B6008E2A39 /* Extensions.swift */; };
+		F3689081271FD9EE0011137F /* AudioManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */; };
 		F36BAA25271D162800980302 /* EventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA24271D162800980302 /* EventosView.swift */; };
 		F36BAA28271D47DA00980302 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA27271D47DA00980302 /* Eventos.swift */; };
 		F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A60899271F24EF0091048E /* EventoDetailView.swift */; };
@@ -82,6 +83,7 @@
 		DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosDetailView.swift; sourceTree = "<group>"; };
 		DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritosView.swift; sourceTree = "<group>"; };
 		DFBDED6E271CA1B6008E2A39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagerViewModel.swift; sourceTree = "<group>"; };
 		F36BAA24271D162800980302 /* EventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosView.swift; sourceTree = "<group>"; };
 		F36BAA27271D47DA00980302 /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		F3A60899271F24EF0091048E /* EventoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDetailView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				CBA5659A26E68740003883CC /* ExpoViewModel.swift */,
 				F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */,
+				F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */,
 				CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
@@ -380,6 +383,7 @@
 				F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */,
 				F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */,
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
+				F3689081271FD9EE0011137F /* AudioManagerViewModel.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */,

@@ -24,6 +24,8 @@ class ExpoViewModel: ObservableObject{
             }
         }
     }
+    
+    
 }
     
 //    func LoadInfo(){
