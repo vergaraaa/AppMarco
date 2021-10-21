@@ -20,6 +20,7 @@ struct AccountView: View {
     //slider animation
     @Namespace var animation
     @State var tabBarOffset: CGFloat = 0
+    @State var reservas = [ReservasModel]()
     
     @EnvironmentObject var loginVM : LoginViewModel
     var body: some View{
@@ -99,7 +100,7 @@ struct AccountView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(.primary)
                                 
-                                Text("correo.com")
+                                Text("mail.com")
                                     .foregroundColor(.gray)
                             })
                                 
@@ -173,6 +174,12 @@ struct AccountView: View {
                         }
                         .padding(.top)
                         .zIndex(0)
+                        
+                        VStack(spacing:18){
+                            
+                            ListaReservaView()
+                            //VisGuiadaView()
+                        }
                            
                     }
                     .padding(.horizontal)
@@ -289,13 +296,13 @@ struct TabButton: View{
     }
 }
 
-    struct LikeView: View {
+    struct VisGuiadaView: View {
         var note: String
-        var expoImg: String?
+        var boletoImg: String?
         var body: some View {
             
             HStack(alignment: .top, spacing: 10, content: {
-                Image("twitter")
+                Image("boleto")
                     .resizable()
                     .aspectRatio(contentMode:  .fill)
                     .frame(width:55, height:55)
@@ -316,7 +323,7 @@ struct TabButton: View{
                         .frame(maxHeight: 100, alignment: .top)
                     
                    
-                    if let image = expoImg{
+                    if let image = boletoImg{
                         GeometryReader{
                             proxy in
                             
@@ -334,4 +341,4 @@ struct TabButton: View{
         }
     }
 
-var sampleText = "im sample text exdiiiiiiiiiiiii"
+

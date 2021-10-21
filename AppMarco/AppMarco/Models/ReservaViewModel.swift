@@ -39,7 +39,7 @@ class ReservaViewModel : ObservableObject {
 
     }
 
-    func getReservas() {
+    func getReservas(completion: @escaping ([ReservasModel])->()) {
 
         let username = UserDefaults.standard.string(forKey: "username") ?? " "
 
@@ -49,7 +49,9 @@ class ReservaViewModel : ObservableObject {
                         print("Obtuvo las reservas")
                         
                     self.arrReservas = reservas.reservation
-
+                    DispatchQueue.main.async {
+                        completion(reservas.reservation) //esta en thred preincipal
+                    }
                 case .failure(let error):
                     print(error)
             }

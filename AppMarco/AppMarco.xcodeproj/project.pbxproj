@@ -10,6 +10,7 @@
 		AC447E4B271FD86200B434F4 /* ReservaGuiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */; };
 		AC447E4E271FD8FA00B434F4 /* ReservaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */; };
 		AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F5B2F2719EB72001AB3DD /* BlurView.swift */; };
+		AC73723C2721B47D00B0767C /* ListaReservaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73723B2721B47D00B0767C /* ListaReservaView.swift */; };
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
@@ -59,6 +60,7 @@
 		AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaGuiaView.swift; sourceTree = "<group>"; };
 		AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewModel.swift; sourceTree = "<group>"; };
 		AC5F5B2F2719EB72001AB3DD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		AC73723B2721B47D00B0767C /* ListaReservaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReservaView.swift; sourceTree = "<group>"; };
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
 				FB054D7826E000920080CF93 /* BoletosView.swift */,
 				AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */,
+				AC73723B2721B47D00B0767C /* ListaReservaView.swift */,
 			);
 			path = Boletos;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
 				CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */,
 				CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */,
+				AC73723C2721B47D00B0767C /* ListaReservaView.swift in Sources */,
 				DFBDED6F271CA1B6008E2A39 /* Extensions.swift in Sources */,
 				ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */,
 			);

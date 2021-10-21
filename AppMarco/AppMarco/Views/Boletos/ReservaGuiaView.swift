@@ -10,6 +10,7 @@ struct ReservaGuiaView: View {
     @State var hora_elegida: String = "10:00 AM"
     //fecha  dia hora usuario
     var horas_disponibles  = ["10:00 AM", "11:30 AM", "1:00 PM", "2:30 PM", "4:00 PM", "5:30 PM"]
+   
 
     
     var body: some View {
@@ -23,15 +24,29 @@ struct ReservaGuiaView: View {
                     //reservaVM.$arrReservas
                     //lanzar llamada view model
                     //getReservas()
-                ){
+                )
+                .onChange(of: fecha, perform: { value in
+                     
+                    reservaVM.getReservasDisponibles(date: fecha) { (horarios) in
+                            DispatchQueue.main.async {
+                            self.horariosDisponibles = horarios
+                            }
+                    }
+                })
+                {
                     Text("Fecha")
                 }
                 
-                Picker("Hora", selection: $hora_elegida) {
+                Picker("Hora", selection: $hora_elegida)
+                
+                {
                     ForEach(horas_disponibles, id: \.self) {
                         Text($0)
                     }
                 }
+               
+                
+
                 
 //
 //                Text("Fecha seleccionada \($reservaVM.fecha_nueva, formatter: dateFormatter)")
