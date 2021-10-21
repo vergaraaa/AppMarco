@@ -16,6 +16,7 @@ struct AccountView: View {
     
     @State var titleOffset: CGFloat = 0
     
+    var ColorR = Color("RosaMarco")
     //slider animation
     @Namespace var animation
     @State var tabBarOffset: CGFloat = 0
@@ -82,24 +83,26 @@ struct AccountView: View {
                             Image("2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 200, height: 200)
+                                .frame(width: 100, height: 100)
                                 .clipShape(Rectangle())
                                 .padding(8)
                                 //.background()
                                 .clipShape(Rectangle())
+                                .border(Color.black, width: 9)
                                 .offset(y: offset < 0 ? getOffset() - 20: -20)
                                 .scaleEffect(getScale())
                             Spacer()
                             
-                            Button(action: {}, label: {
-                                Text("Edit Profile")
-                                    .foregroundColor(Color("RosaMarco"))
-                                    .padding(.vertical,10)
-                                    .padding(.horizontal)
-                                    .background(Capsule().stroke(Color.pink,lineWidth: 1.5))
+                            VStack(alignment: .leading, spacing: 8, content: {
+                                Text("Edgar Vergara")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.primary)
+                                
+                                Text("correo.com")
+                                    .foregroundColor(.gray)
                             })
-                            
-                            
+                                
                             Button(action: {
                                 loginVM.logout()
                                 }, label: {
@@ -107,24 +110,19 @@ struct AccountView: View {
                                     .foregroundColor(Color("RosaMarco"))
                                     .padding(.vertical,10)
                                     .padding(.horizontal)
-                                    .background(Capsule().stroke(Color.pink,lineWidth: 1.5))
+                                    .background(Capsule()
+                                    .stroke(ColorR,lineWidth: 1))
                             })
                         }
                         //.padding(.top,-25)
                         //.padding(.bottom, -10)
                         //Profile Data
                         
-                        VStack(alignment: .leading, spacing: 8, content: {
-                            Text("Edgar Vergara")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.primary)
-                            
-                            Text("correo.com")
-                                .foregroundColor(.gray)
-                           
-
-                        })
+//                        VStack(alignment: .leading, spacing: 8, content: {
+//
+//
+//
+//                        })
                         
                         
                         //menusito
@@ -135,7 +133,8 @@ struct AccountView: View {
                                 
                                 HStack(spacing:5){
                                     TabButton(title: "Exposiciones Favoritas", currentTab: $currentTab, animation: animation)
-//                                    TabButton(title: "Otra cosa", currentTab: $currentTab, animation: animation)
+                                        .foregroundColor(ColorR)
+                                    TabButton(title: "Mis visitas", currentTab: $currentTab, animation: animation)
                                 }
                                 
                             })

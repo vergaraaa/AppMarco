@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC447E4B271FD86200B434F4 /* ReservaGuiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */; };
+		AC447E4E271FD8FA00B434F4 /* ReservaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */; };
 		AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F5B2F2719EB72001AB3DD /* BlurView.swift */; };
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
+		ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE49D0F2720865500D8A512 /* ReservasModel.swift */; };
 		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
 		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
 		CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */; };
@@ -53,10 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaGuiaView.swift; sourceTree = "<group>"; };
+		AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewModel.swift; sourceTree = "<group>"; };
 		AC5F5B2F2719EB72001AB3DD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
+		ACE49D0F2720865500D8A512 /* ReservasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasModel.swift; sourceTree = "<group>"; };
 		AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaRestauranteView.swift; sourceTree = "<group>"; };
 		AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarBoletosView.swift; sourceTree = "<group>"; };
 		CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
 				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
 				FB054D7826E000920080CF93 /* BoletosView.swift */,
+				AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */,
 			);
 			path = Boletos;
 			sourceTree = "<group>";
@@ -293,6 +300,8 @@
 				ACD2901726E5E1F20053CF6D /* RVModel.swift */,
 				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 				CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */,
+				AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */,
+				ACE49D0F2720865500D8A512 /* ReservasModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
 				F3689081271FD9EE0011137F /* AudioManagerViewModel.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
+				ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
 				DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */,
 				F36BAA25271D162800980302 /* EventosView.swift in Sources */,
@@ -403,9 +413,11 @@
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
 				F3E80089271E6C0C00AB3334 /* EventosViewModel.swift in Sources */,
 				DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */,
+				AC447E4B271FD86200B434F4 /* ReservaGuiaView.swift in Sources */,
 				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
 				AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */,
 				DFBDED67271C95D6008E2A39 /* FavoritosView.swift in Sources */,
+				AC447E4E271FD8FA00B434F4 /* ReservaViewModel.swift in Sources */,
 				CBA5659B26E68740003883CC /* ExpoViewModel.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
 				CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */,

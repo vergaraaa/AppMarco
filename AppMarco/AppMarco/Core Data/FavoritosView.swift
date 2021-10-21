@@ -21,7 +21,7 @@ struct FavoritosView: View {
     var body: some View {
         
         ZStack {
-            Color("BgVeige")
+            Color(.white)
             
             ScrollView{
                 
@@ -48,7 +48,7 @@ struct FavoritosView: View {
                                                 ZStack{
                                                     Text(item.startDate_wrapped + " - " + item.endDate_wrapped)
                                                         .font(.callout)
-                                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                                        .fontWeight(.bold)
                                                         .padding(6)
                                                         .foregroundColor(.white)
                                                 }.background(Color("RosaMarco"))
@@ -61,7 +61,7 @@ struct FavoritosView: View {
                             
                             Text(item.name_wrapped)
                                 .font(.title2)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
                                 .padding(.bottom, 5)
                             Text(item.author_wrapped)
                                 .font(.title3)

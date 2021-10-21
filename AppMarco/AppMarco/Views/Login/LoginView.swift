@@ -55,6 +55,9 @@ struct LoginView: View {
                             .padding(.top, 25)
                             
                     })
+                    .alert(isPresented: $loginVM.shortAlertLoginFail) {
+                        Alert(title: Text("Correo/Contrasena incorrectos"))
+                    }
                     //.padding(35)
                     
                     Button(action: {
