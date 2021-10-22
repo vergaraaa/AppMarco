@@ -76,7 +76,7 @@ struct BoletosView: View {
                 NavigationLink(
                     destination: ReservaGuiaView(),
                     label: {
-                        Text("Agendar tu Visita")
+                        Text("AGENDAR TU VISITA")
                             .bold()
                             .font(.title2)
                             .padding()
