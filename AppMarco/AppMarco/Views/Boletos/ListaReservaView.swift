@@ -13,17 +13,25 @@ struct ListaReservaView: View {
     
     var body: some View {
         
-        VStack{
+        VStack(){
+            Text("Mi Historial de Visitas")
+                .font(.title)
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .padding(.top)
             
             List{
                 ForEach(reservas){
                     reserva in
                     
-                    HStack{
-                        Text(reserva.guide.name)
+                    HStack(alignment: .top, spacing: 10){
+                        Image("boleto")
+                            .resizable()
+                            .aspectRatio(contentMode:  .fill)
+                            .frame(width:55, height:55)
+                            .clipShape(Rectangle())
+                        
                         VStack(alignment: .leading, spacing: 10){
 
-                            
                             Text(("Dia: \(reserva.date)"))
                                 .frame(maxHeight: 100, alignment: .top)
                             Text(("Hora: \(reserva.hour)"))
@@ -46,35 +54,6 @@ struct ListaReservaView: View {
         }
         }
     }
-        //var note: String
-//        var boletoImg: String?
-//        VStack{
-//            List{
-//                ForEach(reservas){
-//                    reserva in
-//
-//                    HStack(alignment: .top, spacing: 10, content: {
-////                        Image("boleto")
-////                            .resizable()
-////                            .aspectRatio(contentMode:  .fill)
-////                            .frame(width:55, height:55)
-////                            .clipShape(Rectangle())
-//
-//                       )
-//                        }
-//
-//                    }
-//    //                NavigationLink(
-//                    destination: ReservaGuiaView(fecha_nueva: reserva.fecha, email: reserva.email, cantPer: reserva.cantPer, hora_elegida: reserva.hora, horas_disponibles: reserva.hora_disponible),
-//                    label: {
-//                       )
-//                }
-//            }
-//
-//                }
-//            }
-////        }
-//    }
 }
 
 struct ListaReservaView_Previews: PreviewProvider {

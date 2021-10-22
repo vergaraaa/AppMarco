@@ -75,7 +75,8 @@ struct MainView: View {
             .navigationBarHidden(true)
             
             NavigationView{
-                MarcoView()
+                //MarcoView()
+                ListaReservaView()
                 
             }
             .tabItem {
@@ -94,6 +95,7 @@ struct MainView: View {
             NavigationView{
                 //ReservaGuiaView()
                 AccountView()
+                
             }
             .tabItem {
                 let menuText = Text("Perfil", comment: "Perfil")

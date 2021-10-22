@@ -121,7 +121,7 @@ class WebService{
 
 
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = "PUT"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         //request.httpBody = try? JSONEncoder().encode(body)
         request.httpBody = try? encoder.encode(body)  // con esta linea de código puedes enviar la fecha formateada
