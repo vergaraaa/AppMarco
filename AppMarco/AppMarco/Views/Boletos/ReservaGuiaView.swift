@@ -6,16 +6,18 @@ struct ReservaGuiaView: View {
     @EnvironmentObject private var reservaVM : ReservaViewModel
     @State var fecha_nueva : Date = Date()
     var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
-    @State var cantPer : Int = 1
-    //@State var hora_elegida: String = "10:00 AM"
-    //fecha  dia hora usuario
+    var password : String = UserDefaults.standard.string(forKey: "password") ?? ""
+    var id : String = UserDefaults.standard.string(forKey: "id") ?? ""
+    var name : String = UserDefaults.standard.string(forKey: "name") ?? ""
+    var lastname : String = UserDefaults.standard.string(forKey: "lastname") ?? ""
+
     @State var ReservacionesDisponibles = [ReservasModel]()
     
     
     var body: some View {
         
         VStack{
-            Form {
+            
                 DatePicker(
                     "Fecha de Visita Guiada",
                     selection: $fecha_nueva,
@@ -29,55 +31,31 @@ struct ReservaGuiaView: View {
                     reservaVM.getReservasFechas(fecha: fecha_nueva) { (result) in
                         DispatchQueue.main.async {
                             self.ReservacionesDisponibles = result
+                            print(self.ReservacionesDisponibles)
+                            print(self.email)
+                            print(self.password)
+                            print(self.id)
+                            print(self.name)
+                            print(self.lastname)
                         }
                     }
                 })
               
-                ForEach(ReservacionesDisponibles){ item in
-                    Text(item.hour)
-                    
+                VStack{
+                    ForEach(ReservacionesDisponibles){ item in
+                        NavigationLink(destination: ReservaGuiaDetailView(reservation: item), label: {
+                            HStack{
+                                Text(item.hour)
+                                Text(item.guide.name)
+                            }
+                            
+                        })
+                    }
                 }
                 
-               
-                
-
-                
-//
-//                Text("Fecha seleccionada \($reservaVM.fecha_nueva, formatter: dateFormatter)")
-//
-               
-                
-            }
-           
-            //for each de los arreglos de reserva
-//            Button(action: {
-//                reservaVM.addReserva(fecha: fecha_nueva, hora: hora_elegida, cantPer: cantPer, guia:guia)
-//
-//            }, label: {
-//                Text("Aceptar")
-//            })
-//
-        }//.frame()
-        .scaledToFit()
-        
-        VStack{
-            
-            Text("Lista de Visitas Guiadas")
-                .font(.title)
-                .fontWeight(.bold)
-                
-            
-            HStack{
-                Text("DE esta Hora a Esta Hora ")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("MarcoRosa"))
-                
-                //Text("Edgar")
-            }
-            
-            
         }
+        
+        
     }
 }
 

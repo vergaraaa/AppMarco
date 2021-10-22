@@ -8,22 +8,20 @@
 import SwiftUI
 struct ReservasResponse : Decodable, Encodable {
     var reservation : [ReservasModel]
-    
 }
 
 struct GuideModel : Decodable, Encodable {
-    var id : String
+    var _id: String
     var name : String
     var email : String
 }
 
 struct ReservasModel : Identifiable, Decodable, Encodable {
-    
+    	
     var id  : String
     var date : Date
     var hour : String
     var user: String
-    //var idG : String
     var guide: GuideModel
     var spots: Int
     var available : Bool

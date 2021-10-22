@@ -3,50 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC447E4B271FD86200B434F4 /* ReservaGuiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */; };
-		AC447E4E271FD8FA00B434F4 /* ReservaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */; };
-		AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F5B2F2719EB72001AB3DD /* BlurView.swift */; };
-		AC73723C2721B47D00B0767C /* ListaReservaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73723B2721B47D00B0767C /* ListaReservaView.swift */; };
 		ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */; };
 		ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901726E5E1F20053CF6D /* RVModel.swift */; };
 		ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2901A26E5E6920053CF6D /* RVView.swift */; };
-		ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE49D0F2720865500D8A512 /* ReservasModel.swift */; };
 		AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */; };
 		AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */; };
-		CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */; };
-		CB28B3D4270E6EBF0027DBA0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */; };
 		CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */; };
 		CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A22D26DBC858001F88E3 /* MainView.swift */; };
 		CB55A23026DBC858001F88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A22F26DBC858001F88E3 /* Assets.xcassets */; };
 		CB55A23326DBC858001F88E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB55A23226DBC858001F88E3 /* Preview Assets.xcassets */; };
 		CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7526E6CCB800A3E685 /* MapView.swift */; };
 		CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */; };
-		CB8717A82708CD9100BA5F2B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */; };
-		CB8717AB2708CE4200BA5F2B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8717AA2708CE4200BA5F2B /* WebService.swift */; };
 		CB8831BB26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */; };
-		CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3F02C26FCECFD00260594 /* AccountView.swift */; };
 		CBA5659226E686B4003883CC /* Expos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659126E686B4003883CC /* Expos.swift */; };
-		CBA5659B26E68740003883CC /* ExpoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659A26E68740003883CC /* ExpoViewModel.swift */; };
+		CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5659A26E68740003883CC /* ExpoModel.swift */; };
+		CBA565A326E6995C003883CC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA565A226E6995C003883CC /* TestView.swift */; };
 		CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAFA6C26E2DDE400082696 /* LoginView.swift */; };
-		CBFF12B827225E4E0024F738 /* ReservaGuiaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF12B727225E4E0024F738 /* ReservaGuiaDetailView.swift */; };
-		DFBDED5F271C8E13008E2A39 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED5D271C8E13008E2A39 /* Model.xcdatamodeld */; };
-		DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED60271C8E4E008E2A39 /* Persistence.swift */; };
-		DFBDED64271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED62271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift */; };
-		DFBDED65271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED63271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift */; };
-		DFBDED67271C95D6008E2A39 /* FavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED66271C95D6008E2A39 /* FavoritosView.swift */; };
-		DFBDED69271C96B7008E2A39 /* FavoritosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */; };
-		DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */; };
-		DFBDED6F271CA1B6008E2A39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDED6E271CA1B6008E2A39 /* Extensions.swift */; };
-		F3689081271FD9EE0011137F /* AudioManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */; };
-		F36BAA25271D162800980302 /* EventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA24271D162800980302 /* EventosView.swift */; };
-		F36BAA28271D47DA00980302 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BAA27271D47DA00980302 /* Eventos.swift */; };
-		F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A60899271F24EF0091048E /* EventoDetailView.swift */; };
 		F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB958026E828FA0078258C /* ExposDetailView.swift */; };
-		F3E80089271E6C0C00AB3334 /* EventosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */; };
 		FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7426DFFC960080CF93 /* HomeView.swift */; };
 		FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7626E0008A0080CF93 /* ExposView.swift */; };
 		FB054D7926E000920080CF93 /* BoletosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB054D7826E000920080CF93 /* BoletosView.swift */; };
@@ -58,17 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaGuiaView.swift; sourceTree = "<group>"; };
-		AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewModel.swift; sourceTree = "<group>"; };
-		AC5F5B2F2719EB72001AB3DD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		AC73723B2721B47D00B0767C /* ListaReservaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReservaView.swift; sourceTree = "<group>"; };
 		ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecorridosVirtuales.swift; path = AppMarco/Models/RecorridosVirtuales.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901726E5E1F20053CF6D /* RVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RVModel.swift; path = AppMarco/Models/RVModel.swift; sourceTree = SOURCE_ROOT; };
 		ACD2901A26E5E6920053CF6D /* RVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVView.swift; sourceTree = "<group>"; };
-		ACE49D0F2720865500D8A512 /* ReservasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasModel.swift; sourceTree = "<group>"; };
 		AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaRestauranteView.swift; sourceTree = "<group>"; };
 		AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarBoletosView.swift; sourceTree = "<group>"; };
-		CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CB55A22826DBC858001F88E3 /* AppMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMarcoApp.swift; sourceTree = "<group>"; };
 		CB55A22D26DBC858001F88E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -77,28 +48,12 @@
 		CB55A23426DBC858001F88E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6A6D7526E6CCB800A3E685 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
-		CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		CB8717AA2708CE4200BA5F2B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		CB8831BA26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarApperanceModifier.swift; sourceTree = "<group>"; };
-		CBA3F02C26FCECFD00260594 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CBA5659126E686B4003883CC /* Expos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expos.swift; sourceTree = "<group>"; };
-		CBA5659A26E68740003883CC /* ExpoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoViewModel.swift; sourceTree = "<group>"; };
+		CBA5659A26E68740003883CC /* ExpoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoModel.swift; sourceTree = "<group>"; };
+		CBA565A226E6995C003883CC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		CBFAFA6C26E2DDE400082696 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CBFF12B727225E4E0024F738 /* ReservaGuiaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaGuiaDetailView.swift; sourceTree = "<group>"; };
-		DFBDED5E271C8E13008E2A39 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		DFBDED60271C8E4E008E2A39 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		DFBDED62271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExposFavoritas+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DFBDED63271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExposFavoritas+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DFBDED66271C95D6008E2A39 /* FavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosView.swift; sourceTree = "<group>"; };
-		DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosDetailView.swift; sourceTree = "<group>"; };
-		DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritosView.swift; sourceTree = "<group>"; };
-		DFBDED6E271CA1B6008E2A39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagerViewModel.swift; sourceTree = "<group>"; };
-		F36BAA24271D162800980302 /* EventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosView.swift; sourceTree = "<group>"; };
-		F36BAA27271D47DA00980302 /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
-		F3A60899271F24EF0091048E /* EventoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDetailView.swift; sourceTree = "<group>"; };
 		F3CB958026E828FA0078258C /* ExposDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposDetailView.swift; sourceTree = "<group>"; };
-		F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosViewModel.swift; sourceTree = "<group>"; };
 		FB054D7426DFFC960080CF93 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB054D7626E0008A0080CF93 /* ExposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposView.swift; sourceTree = "<group>"; };
 		FB054D7826E000920080CF93 /* BoletosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosView.swift; sourceTree = "<group>"; };
@@ -114,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB28B3D4270E6EBF0027DBA0 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,14 +82,6 @@
 				FB9B68A526E67C3D00BCC7CF /* RobotoSlab-Medium.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		CB11FA4F270BACD800C6AD66 /* Web */ = {
-			isa = PBXGroup;
-			children = (
-				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
-			);
-			path = Web;
 			sourceTree = "<group>";
 		};
 		CB55A21F26DBC858001F88E3 = {
@@ -157,19 +103,29 @@
 		CB55A22A26DBC858001F88E3 /* AppMarco */ = {
 			isa = PBXGroup;
 			children = (
-				DFBDED5C271C8DFC008E2A39 /* Core Data */,
-				ACD2900C26E5D12A0053CF6D /* Fonts */,
 				FB9B68AD26E67CB000BCC7CF /* Models */,
+				ACD2900C26E5D12A0053CF6D /* Fonts */,
 				CBFAFA6A26E2DD5F00082696 /* Modifiers */,
-				CB11FA4F270BACD800C6AD66 /* Web */,
-				CB8717A32708CB1A00BA5F2B /* Services */,
-				CB9035412708EBED00B12866 /* Views */,
-				CB8717A52708CB4E00BA5F2B /* ViewModels */,
 				CB55A22B26DBC858001F88E3 /* AppMarcoApp.swift */,
+				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
+				CBA565A226E6995C003883CC /* TestView.swift */,
+				CB55A22D26DBC858001F88E3 /* MainView.swift */,
+				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
+				FB054D7626E0008A0080CF93 /* ExposView.swift */,
+				F3CB958026E828FA0078258C /* ExposDetailView.swift */,
+				CBA5659126E686B4003883CC /* Expos.swift */,
+				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
+				CBA5659A26E68740003883CC /* ExpoModel.swift */,
+				FB054D7826E000920080CF93 /* BoletosView.swift */,
+				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
+				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
+				CB6A6D7526E6CCB800A3E685 /* MapView.swift */,
+				FB054D7426DFFC960080CF93 /* HomeView.swift */,
+				ACD2901A26E5E6920053CF6D /* RVView.swift */,
+				FB9B68AB26E67C9A00BCC7CF /* WebView.swift */,
 				CB55A22F26DBC858001F88E3 /* Assets.xcassets */,
 				CB55A23426DBC858001F88E3 /* Info.plist */,
 				CB55A23126DBC858001F88E3 /* Preview Content */,
-				DFBDED6E271CA1B6008E2A39 /* Extensions.swift */,
 			);
 			path = AppMarco;
 			sourceTree = "<group>";
@@ -182,101 +138,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CB8717A32708CB1A00BA5F2B /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				CB8717AA2708CE4200BA5F2B /* WebService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		CB8717A42708CB3400BA5F2B /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CBFAFA6C26E2DDE400082696 /* LoginView.swift */,
-				CB11FA51270BB7EC00C6AD66 /* SignUpView.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		CB8717A52708CB4E00BA5F2B /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CBA5659A26E68740003883CC /* ExpoViewModel.swift */,
-				F3E80088271E6C0C00AB3334 /* EventosViewModel.swift */,
-				F3689080271FD9EE0011137F /* AudioManagerViewModel.swift */,
-				CB8717A72708CD9100BA5F2B /* LoginViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		CB9035412708EBED00B12866 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CB9035462708ECCB00B12866 /* Account */,
-				CB9035442708EC8000B12866 /* Boletos */,
-				CB9035432708EC7100B12866 /* Expos */,
-				CB9035422708EC3200B12866 /* Home */,
-				CB8717A42708CB3400BA5F2B /* Login */,
-				CB9035452708ECA000B12866 /* Marco */,
-				CB55A22D26DBC858001F88E3 /* MainView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CB9035422708EC3200B12866 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				ACD2901A26E5E6920053CF6D /* RVView.swift */,
-				FB054D7A26E0009B0080CF93 /* TiendaView.swift */,
-				FB054D7426DFFC960080CF93 /* HomeView.swift */,
-				F36BAA24271D162800980302 /* EventosView.swift */,
-				F3A60899271F24EF0091048E /* EventoDetailView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		CB9035432708EC7100B12866 /* Expos */ = {
-			isa = PBXGroup;
-			children = (
-				FB054D7626E0008A0080CF93 /* ExposView.swift */,
-				F3CB958026E828FA0078258C /* ExposDetailView.swift */,
-				DFBDED6C271C9BD5008E2A39 /* AddToFavoritosView.swift */,
-			);
-			path = Expos;
-			sourceTree = "<group>";
-		};
-		CB9035442708EC8000B12866 /* Boletos */ = {
-			isa = PBXGroup;
-			children = (
-				AF9E355026E83B2000DC1DB1 /* ReservaRestauranteView.swift */,
-				AF9E355326E83B4A00DC1DB1 /* ComprarBoletosView.swift */,
-				FB054D7826E000920080CF93 /* BoletosView.swift */,
-				AC447E4A271FD86200B434F4 /* ReservaGuiaView.swift */,
-				AC73723B2721B47D00B0767C /* ListaReservaView.swift */,
-				CBFF12B727225E4E0024F738 /* ReservaGuiaDetailView.swift */,
-			);
-			path = Boletos;
-			sourceTree = "<group>";
-		};
-		CB9035452708ECA000B12866 /* Marco */ = {
-			isa = PBXGroup;
-			children = (
-				FB054D7C26E000A30080CF93 /* MarcoView.swift */,
-				CB6A6D7526E6CCB800A3E685 /* MapView.swift */,
-			);
-			path = Marco;
-			sourceTree = "<group>";
-		};
-		CB9035462708ECCB00B12866 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				AC5F5B2F2719EB72001AB3DD /* BlurView.swift */,
-				CBA3F02C26FCECFD00260594 /* AccountView.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		CBFAFA6A26E2DD5F00082696 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,29 +146,12 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		DFBDED5C271C8DFC008E2A39 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				DFBDED60271C8E4E008E2A39 /* Persistence.swift */,
-				DFBDED5D271C8E13008E2A39 /* Model.xcdatamodeld */,
-				DFBDED62271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift */,
-				DFBDED63271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift */,
-				DFBDED66271C95D6008E2A39 /* FavoritosView.swift */,
-				DFBDED68271C96B7008E2A39 /* FavoritosDetailView.swift */,
-			);
-			path = "Core Data";
-			sourceTree = "<group>";
-		};
 		FB9B68AD26E67CB000BCC7CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CBA5659126E686B4003883CC /* Expos.swift */,
-				F36BAA27271D47DA00980302 /* Eventos.swift */,
 				ACD2901726E5E1F20053CF6D /* RVModel.swift */,
 				ACD2901426E5E1050053CF6D /* RecorridosVirtuales.swift */,
 				CB6A6D7826E6D09F00A3E685 /* MapLocation.swift */,
-				AC447E4D271FD8FA00B434F4 /* ReservaViewModel.swift */,
-				ACE49D0F2720865500D8A512 /* ReservasModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,9 +172,6 @@
 			dependencies = (
 			);
 			name = AppMarco;
-			packageProductDependencies = (
-				CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */,
-			);
 			productName = AppMarco;
 			productReference = CB55A22826DBC858001F88E3 /* AppMarco.app */;
 			productType = "com.apple.product-type.application";
@@ -358,9 +199,6 @@
 				Base,
 			);
 			mainGroup = CB55A21F26DBC858001F88E3;
-			packageReferences = (
-				CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-			);
 			productRefGroup = CB55A22926DBC858001F88E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,46 +229,24 @@
 			files = (
 				CB8831BB26E2AB0E0070FAD1 /* NavBarApperanceModifier.swift in Sources */,
 				CBA5659226E686B4003883CC /* Expos.swift in Sources */,
-				CB8717A82708CD9100BA5F2B /* LoginViewModel.swift in Sources */,
 				FB054D7726E0008A0080CF93 /* ExposView.swift in Sources */,
-				CB11FA52270BB7EC00C6AD66 /* SignUpView.swift in Sources */,
-				DFBDED65271C9132008E2A39 /* ExposFavoritas+CoreDataProperties.swift in Sources */,
 				F3CB958126E828FA0078258C /* ExposDetailView.swift in Sources */,
-				F3A6089A271F24EF0091048E /* EventoDetailView.swift in Sources */,
 				FB9B68AC26E67C9A00BCC7CF /* WebView.swift in Sources */,
-				F3689081271FD9EE0011137F /* AudioManagerViewModel.swift in Sources */,
+				CBA565A326E6995C003883CC /* TestView.swift in Sources */,
 				FB054D7B26E0009B0080CF93 /* TiendaView.swift in Sources */,
-				ACE49D102720865500D8A512 /* ReservasModel.swift in Sources */,
 				CBFAFA6D26E2DDE400082696 /* LoginView.swift in Sources */,
-				DFBDED61271C8E4E008E2A39 /* Persistence.swift in Sources */,
-				F36BAA25271D162800980302 /* EventosView.swift in Sources */,
-				DFBDED69271C96B7008E2A39 /* FavoritosDetailView.swift in Sources */,
 				FB054D7D26E000A30080CF93 /* MarcoView.swift in Sources */,
-				F36BAA28271D47DA00980302 /* Eventos.swift in Sources */,
 				ACD2901526E5E1050053CF6D /* RecorridosVirtuales.swift in Sources */,
-				DFBDED5F271C8E13008E2A39 /* Model.xcdatamodeld in Sources */,
-				CB8717AB2708CE4200BA5F2B /* WebService.swift in Sources */,
-				CBFF12B827225E4E0024F738 /* ReservaGuiaDetailView.swift in Sources */,
-				AC5F5B302719EB72001AB3DD /* BlurView.swift in Sources */,
 				CB6A6D7626E6CCB800A3E685 /* MapView.swift in Sources */,
 				AF9E355426E83B4A00DC1DB1 /* ComprarBoletosView.swift in Sources */,
 				ACD2901B26E5E6920053CF6D /* RVView.swift in Sources */,
 				FB054D7926E000920080CF93 /* BoletosView.swift in Sources */,
-				DFBDED64271C9132008E2A39 /* ExposFavoritas+CoreDataClass.swift in Sources */,
 				CB55A22E26DBC858001F88E3 /* MainView.swift in Sources */,
-				F3E80089271E6C0C00AB3334 /* EventosViewModel.swift in Sources */,
-				DFBDED6D271C9BD5008E2A39 /* AddToFavoritosView.swift in Sources */,
-				AC447E4B271FD86200B434F4 /* ReservaGuiaView.swift in Sources */,
 				FB054D7526DFFC960080CF93 /* HomeView.swift in Sources */,
 				AF9E355126E83B2000DC1DB1 /* ReservaRestauranteView.swift in Sources */,
-				DFBDED67271C95D6008E2A39 /* FavoritosView.swift in Sources */,
-				AC447E4E271FD8FA00B434F4 /* ReservaViewModel.swift in Sources */,
-				CBA5659B26E68740003883CC /* ExpoViewModel.swift in Sources */,
+				CBA5659B26E68740003883CC /* ExpoModel.swift in Sources */,
 				CB55A22C26DBC858001F88E3 /* AppMarcoApp.swift in Sources */,
-				CBA3F02D26FCECFD00260594 /* AccountView.swift in Sources */,
 				CB6A6D7926E6D09F00A3E685 /* MapLocation.swift in Sources */,
-				AC73723C2721B47D00B0767C /* ListaReservaView.swift in Sources */,
-				DFBDED6F271CA1B6008E2A39 /* Extensions.swift in Sources */,
 				ACD2901826E5E1F20053CF6D /* RVModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,38 +434,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CB28B3D3270E6EBF0027DBA0 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB28B3D2270E6EBF0027DBA0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		DFBDED5D271C8E13008E2A39 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DFBDED5E271C8E13008E2A39 /* Model.xcdatamodel */,
-			);
-			currentVersion = DFBDED5E271C8E13008E2A39 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CB55A22026DBC858001F88E3 /* Project object */;
 }

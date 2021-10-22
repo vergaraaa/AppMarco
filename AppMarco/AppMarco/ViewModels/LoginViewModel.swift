@@ -9,10 +9,11 @@ import Foundation
 
 class LoginViewModel : ObservableObject {
     var id : String = UserDefaults.standard.string(forKey: "id") ?? ""
-    var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
-    var password : String = UserDefaults.standard.string(forKey: "password") ?? ""
     var name : String = UserDefaults.standard.string(forKey: "name") ?? ""
     var lastname : String = UserDefaults.standard.string(forKey: "lastname") ?? ""
+    var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
+    var password : String = UserDefaults.standard.string(forKey: "password") ?? ""
+
     var usertype: [String] = [""]
     @Published var isLogged : Bool = false
     @Published var shortAlertLoginFail : Bool = false
@@ -22,13 +23,17 @@ class LoginViewModel : ObservableObject {
         WebService().login(email: email, password: password) { result in
             print(result)
             switch (result) {
-	            case .success(let token):
+            case .success(let response):
                 DispatchQueue.main.async {
+                    UserDefaults.standard.setValue(response.id, forKey: "id")
+                    UserDefaults.standard.setValue(response.name, forKey: "name")
+                    UserDefaults.standard.setValue(response.lastname, forKey: "lastname")
+                    UserDefaults.standard.setValue(self.email, forKey: "email")
+                    UserDefaults.standard.setValue(self.password, forKey: "password")
                     self.isLogged = true
                 }
-                UserDefaults.standard.setValue(self.id, forKey: "id")
-                UserDefaults.standard.setValue(self.email, forKey: "email")
-                UserDefaults.standard.setValue(self.password, forKey: "password")
+                
+
                 
                 case .failure(let error):
                     DispatchQueue.main.async {

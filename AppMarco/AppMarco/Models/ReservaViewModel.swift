@@ -14,14 +14,9 @@ class ReservaViewModel : ObservableObject {
 
 
     
-    func addReserva(username : String, fecha: Date, hora: String, cantPer: Int, guia: String)  {
+    func addReserva(id: String, user: String, date: Date, hour: String, spots: Int, guide: GuideModel)  {
         
-        
-        
-//    func addReserva()  {
-
-
-        WebService().addReserva(username : username, fecha: fecha, hora: hora, cantPer: cantPer, guia : guia) { result in
+        WebService().addReserva(id: id, user : user, date: date, hour: hour, spots: spots, guide : guide) { result in
 
             switch (result) {
             case .success(let succ ):
@@ -47,10 +42,10 @@ class ReservaViewModel : ObservableObject {
             switch result {
                 case .success(let reservas):
                         print("Obtuvo las reservas")
-                        
-                    self.arrReservas = reservas.reservation
+
+                    self.arrReservas = reservas
                     DispatchQueue.main.async {
-                        completion(reservas.reservation) //esta en thred preincipal
+                        completion(reservas) //esta en thred preincipal
                     }
                 case .failure(let error):
                     print(error)
@@ -66,8 +61,10 @@ class ReservaViewModel : ObservableObject {
                 case .success(let reservas):
                         print("Obtuvo las reservas")
                         
-                    self.arrReservas = reservas.reservation
-
+                    self.arrReservas = reservas
+                    DispatchQueue.main.async {
+                        completion(self.arrReservas) //esta en thred preincipal
+                    }
                 case .failure(let error):
                     print(error)
             }

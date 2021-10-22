@@ -24,11 +24,11 @@ struct LoginRequestBody: Codable{
 
 struct AddReservaRequestBody: Codable{
     
-    let usuario: String
-    let fecha : Date
-    let hora : String
-    let canPer : Int
-    let guia: String
+    let user: String
+    let date : Date
+    let hour : String
+    let spots : Int
+    let guide : GuideModel
 }
 
 
@@ -39,6 +39,8 @@ struct AddReservaResponse: Codable{
 
 struct LoginResponse: Codable{
     let id: String?
+    let name: String?
+    let lastname: String?
     let message: String?
     let token: String?
     let usertype: [String]?
@@ -61,7 +63,7 @@ struct SignUpResponse: Codable{
 
 
 class WebService{
-    func login(email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
+    func login(email: String, password: String, completion: @escaping (Result<LoginResponse, AuthenticationError>) -> Void) {
         
         guard let url = URL(string: "http://100.24.228.237:10021/api/users/login") else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
@@ -91,7 +93,8 @@ class WebService{
                 completion(.failure(.invalidCredentials))
                 return
             }
-            completion(.success(token))
+            
+            completion(.success(loginResponse))
             
             
         }.resume()
@@ -99,14 +102,14 @@ class WebService{
     
     
     
-    func addReserva( username : String, fecha: Date, hora: String, cantPer: Int, guia: String, completion: @escaping (Result<Bool, ComunicationError>) -> Void) {
+    func addReserva(id: String, user: String, date: Date, hour: String, spots: Int, guide: GuideModel, completion: @escaping (Result<Bool, ComunicationError>) -> Void) {
 
-        guard let url = URL(string: "http://100.24.228.237:10021/reservations/add") else {
+        guard let url = URL(string: "http://100.24.228.237:10021/api/reservations/add/" + id) else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
 
-        let body = AddReservaRequestBody(usuario: username, fecha: fecha, hora: hora, canPer: cantPer, guia: guia)
+        let body = AddReservaRequestBody(user: user, date: date, hour: hour, spots: spots, guide: guide)
 
         print(body)
 
@@ -146,16 +149,22 @@ class WebService{
         }.resume()
     }
 
-    func getReservas(id : String, completion: @escaping (Result<ReservasResponse, ComunicationError>) -> Void) {
+    func getReservas(id : String, completion: @escaping (Result<[ReservasModel], ComunicationError>) -> Void) {
 
         guard let url = URL(string: "http://100.24.228.237:10021/api/reservations/user/" + id) else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
+        
+        let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
+                let decoder = JSONDecoder()
+                //decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .formatted(formatter)
 
         URLSession.shared.dataTask(with: url) { data, response, error in
-            let Response = try! JSONDecoder().decode(ReservasResponse.self, from: data!)
+            let Response = try! decoder.decode([ReservasModel].self, from: data!)
             print(Response)
             DispatchQueue.main.async {
                 completion(.success(Response))
@@ -166,20 +175,28 @@ class WebService{
     }
     
     
-    func getReservasFechas(fecha : Date, completion: @escaping (Result<ReservasResponse, ComunicationError>) -> Void) {
+    func getReservasFechas(fecha : Date, completion: @escaping (Result<[ReservasModel], ComunicationError>) -> Void) {
 
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
         let fechaNueva = formatter1.string(from: fecha)
         
-        guard let url = URL(string: "http://100.24.228.237:10021/reservations/available/" + fechaNueva) else {
+        guard let url = URL(string: "http://100.24.228.237:10021/api/reservations/available/" + fechaNueva) else {
             completion(.failure(.custom(errorMessage: "URL is not Correct")))
             return
         }
 
+        let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+                let decoder = JSONDecoder()
+                //decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .formatted(formatter)
+
 
         URLSession.shared.dataTask(with: url) { data, response, error in
-            let Response = try! JSONDecoder().decode(ReservasResponse.self, from: data!)
+            //let Response = try! JSONDecoder().decode([ReservasModel].self, from: data!)
+            let Response = try! decoder.decode([ReservasModel].self, from: data!)
             print(Response)
             DispatchQueue.main.async {
                 completion(.success(Response))
@@ -197,7 +214,7 @@ class WebService{
             return
         }
     
-        let body = SignUpRequestBody(name: name, lastname: lastname, email: email, password: password, usertype: usertype)
+        let body = SignUpRequestBody(name: name, lastname: lastname,			 email: email, password: password, usertype: usertype)
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

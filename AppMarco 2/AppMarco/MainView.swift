@@ -75,8 +75,22 @@ struct MainView: View {
             .navigationBarHidden(true)
             
             NavigationView{
+                TiendaView()
+            }
+            .tabItem {
+                let menuText = Text("Tienda", comment: "Tienda")
+                Label{
+                    menuText
+                } icon: {
+                    Image(systemName: "cart")
+                }
+            }
+            .tag(Tab.tienda)
+            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
+            .navigationBarHidden(true)
+            
+            NavigationView{
                 MarcoView()
-                
             }
             .tabItem {
                 let menuText = Text("Marco", comment: "Marco")
@@ -89,40 +103,6 @@ struct MainView: View {
             .tag(Tab.marco)
             .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
             .navigationBarHidden(true)
-            
-            
-            NavigationView{
-                //ReservaGuiaView()
-                AccountView()
-            }
-            .tabItem {
-                let menuText = Text("Perfil", comment: "Perfil")
-                Label{
-                    menuText
-                } icon: {
-                    Image(systemName: "person")
-                }
-            }
-            
-            /*
-            NavigationView{
-                FavoritosView()
-            }
-            .tabItem {
-                let menuText = Text("Favoritos", comment: "Favoritos")
-                Label{
-                    menuText
-                } icon: {
-                    Image(systemName: "star.fill")
-                }
-            }*/
-            
-            .tag(Tab.tienda)
-            .navigationAppearance(backgroundColor: UIColor(Color("RosaMarco")), foregroundColor: .white, tintColor: UIColor(.white), hideSeparator: true)
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-            
-            
         }
         //.accentColor(Color("RosaMarco"))
     }
