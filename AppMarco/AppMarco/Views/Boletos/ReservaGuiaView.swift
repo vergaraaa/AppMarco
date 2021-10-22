@@ -15,18 +15,48 @@ struct ReservaGuiaView: View {
     
     
     var body: some View {
-        
         VStack{
-            
+           
+           // Spacer()
+            Image("BannerCentrado")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300 , height: 200 , alignment: .center)
+                .cornerRadius(0)
+                .padding(20)
+        }
+        VStack{
+            Text("Agenda tu Visita a #MuseoDeTodos")
+                .font(.title2)
+                .bold()
+                .padding()
+            ForEach(ReservacionesDisponibles){ item in
+                NavigationLink(destination: ReservaGuiaDetailView(reservation: item), label: {
+                    HStack{
+                        Text("Hora de Recorrido: " + item.hour)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .padding()
+                           // .scaledToFit()
+                        Text("Nombre de Guia: " + item.guide.name)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .padding()
+                          //  .scaledToFit()
+                    }
+                    
+                })
+            }
                 DatePicker(
                     "Fecha de Visita Guiada",
                     selection: $fecha_nueva,
                     displayedComponents: [.date]
-                        
+                       
                     //reservaVM.$arrReservas
                     //lanzar llamada view model
                     //getReservas()
                 )
+               
                 .onChange(of: fecha_nueva, perform: { value in
                     reservaVM.getReservasFechas(fecha: fecha_nueva) { (result) in
                         DispatchQueue.main.async {
@@ -40,20 +70,21 @@ struct ReservaGuiaView: View {
                         }
                     }
                 })
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .padding()
               
-                VStack{
-                    ForEach(ReservacionesDisponibles){ item in
-                        NavigationLink(destination: ReservaGuiaDetailView(reservation: item), label: {
-                            HStack{
-                                Text(item.hour)
-                                Text(item.guide.name)
-                            }
-                            
-                        })
-                    }
-                }
+               
+                  
+                
+             
                 
         }
+        .navigationTitle("Agenda una Visita")
+        .frame(width: 400, height: 400, alignment: .center)
+        .padding()
+        .scaledToFit()
+        .foregroundColor(.black)
+        //.background(Color("RosaMarco"))
         
         
     }
