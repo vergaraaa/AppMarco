@@ -10,9 +10,9 @@ import SwiftUI
 struct AccountView: View {
 //    @Binding var name: String
     @State var offset: CGFloat = 0
-    
+    @State var tabIndex = 0
     @Environment(\.colorScheme) var colorScheme
-    @State var currentTab = "Exposiciones Favoritas"
+    @State var currentTab = "FavoritosView"
     
     @State var titleOffset: CGFloat = 0
     
@@ -115,6 +115,22 @@ struct AccountView: View {
                                     .stroke(ColorR,lineWidth: 1))
                             })
                         }
+                        
+                        VStack{
+                            CustomTopTabBar(tabIndex: $tabIndex)
+                            if tabIndex == 0 {
+                                FavoritosView()
+                                    .scaledToFill()
+                                
+                            }
+                            else {
+                                ListaReservaView()
+                                    
+                                    
+                                    
+                            }
+                        }
+                        
                         //.padding(.top,-25)
                         //.padding(.bottom, -10)
                         //Profile Data
@@ -129,16 +145,16 @@ struct AccountView: View {
                         //menusito
                         VStack(spacing:0){
                             
-                            
+                            /*
                             ScrollView(.horizontal, showsIndicators: false, content: {
-                                
+                                /*
                                 HStack(spacing:5){
                                     TabButton(title: "Exposiciones Favoritas", currentTab: $currentTab, animation: animation)
                                         .foregroundColor(ColorR)
                                     TabButton(title: "Mis visitas", currentTab: $currentTab, animation: animation)
-                                }
+                                }*/
                                 
-                            })
+                            })*/
                             Divider()
                         }
                         .padding(.top,30)
@@ -168,18 +184,18 @@ struct AccountView: View {
                             
                             //expos ejemplo
                             
-                            FavoritosView()
-                                .scaledToFill()
+                            //FavoritosView()
+                              //  .scaledToFill()
                             
                         }
                         .padding(.top)
                         .zIndex(0)
-                        
+                        /*
                         VStack(spacing:18){
                             
                             ListaReservaView()
                             //VisGuiadaView()
-                        }
+                        }*/
                            
                     }
                     .padding(.horizontal)
@@ -340,5 +356,83 @@ struct TabButton: View{
         
         }
     }
+struct CustomTopTabBar: View {
+    @Binding var tabIndex: Int
+    var body: some View {
+        
+        ScrollView(.horizontal, showsIndicators: false, content: {
+            HStack(spacing: 25) {
+                TabBarButton(text: "Mis Expos", isSelected: .constant(tabIndex == 0))
+                    .foregroundColor(Color("RosaMarco"))
+                    .onTapGesture { onButtonTapped(index: 0) }
+                TabBarButton(text: "Mis Visitas", isSelected: .constant(tabIndex == 1))
+                    .foregroundColor(Color("RosaMarco"))
+                    .onTapGesture { onButtonTapped(index: 1) }
+            }
+        
+        })
+    }
+    
+    private func onButtonTapped(index: Int) {
+        withAnimation { tabIndex = index }
+    }
+}
 
+struct TabBarButton: View {
+    let text: String
+    @Binding var isSelected: Bool
+    var body: some View {
+        Text(text)
+            .fontWeight(isSelected ? .heavy : .regular)
+            .padding(.bottom,10)
+ 
+    }
+}
+
+struct EdgeBorder: Shape {
+
+    var width: CGFloat
+    var edges: [Edge]
+
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        for edge in edges {
+            var x: CGFloat {
+                switch edge {
+                case .top, .bottom, .leading: return rect.minX
+                case .trailing: return rect.maxX - width
+                }
+            }
+
+            var y: CGFloat {
+                switch edge {
+                case .top, .leading, .trailing: return rect.minY
+                case .bottom: return rect.maxY - width
+                }
+            }
+
+            var w: CGFloat {
+                switch edge {
+                case .top, .bottom: return rect.width
+                case .leading, .trailing: return self.width
+                }
+            }
+
+            var h: CGFloat {
+                switch edge {
+                case .top, .bottom: return self.width
+                case .leading, .trailing: return rect.height
+                }
+            }
+            path.addPath(Path(CGRect(x: x, y: y, width: w, height: h)))
+        }
+        return path
+    }
+}
+
+extension View {
+    func border(width: CGFloat, edges: [Edge], color: SwiftUI.Color) -> some View {
+        overlay(EdgeBorder(width: width, edges: edges).foregroundColor(color))
+    }
+}
 

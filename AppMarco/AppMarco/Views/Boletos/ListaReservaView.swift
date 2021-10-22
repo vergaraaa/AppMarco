@@ -13,7 +13,7 @@ struct ListaReservaView: View {
     
     var body: some View {
         
-        VStack(){
+        VStack{
             Text("Mi Historial de Visitas")
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -45,6 +45,7 @@ struct ListaReservaView: View {
                     
                 }
             }
+            .scaledToFill()
             .onAppear(){
                 reservaVM.getReservas{(result) in
                 DispatchQueue.main.async{

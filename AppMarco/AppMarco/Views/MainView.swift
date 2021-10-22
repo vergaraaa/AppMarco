@@ -75,8 +75,8 @@ struct MainView: View {
             .navigationBarHidden(true)
             
             NavigationView{
-                //MarcoView()
-                ListaReservaView()
+                MarcoView()
+                //ListaReservaView()
                 
             }
             .tabItem {

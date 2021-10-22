@@ -25,13 +25,15 @@ struct FavoritosView: View {
             
             ScrollView{
                 
+                Spacer()
+                
+                
                 VStack {
                     Text("EXPOSICIONES FAVORITAS")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .padding()
+                        .padding(2)
                     
-                    Spacer()
                     
                     VStack{
                         ForEach(favoritos){item in
