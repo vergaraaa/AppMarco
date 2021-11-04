@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListaReservaView: View {
+    let utcISODateFormatter = ISO8601DateFormatter()
     @EnvironmentObject var reservaVM : ReservaViewModel
     @State var reservas = [ReservasModel]()
     
@@ -31,8 +32,7 @@ struct ListaReservaView: View {
                             .clipShape(Rectangle())
                         
                         VStack(alignment: .leading, spacing: 10){
-
-                            Text(("Dia: \(reserva.date)"))
+                            Text(("Dia: \(utcISODateFormatter.string(from: reserva.date))"))
                                 .frame(maxHeight: 100, alignment: .top)
                             Text(("Hora: \(reserva.hour)"))
                                 .frame(maxHeight: 100, alignment: .top)
