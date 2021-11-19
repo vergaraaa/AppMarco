@@ -41,7 +41,6 @@ struct ReservaGuiaDetailView: View {
                 //Text(utcISODateFormatter.string(from: reservation.date))
                 
                 Text(reservation.date, style: .date)
-                
                 Text(reservation.hour)
                 //.scaledToFit()
                     //.foregroundColor(.white)

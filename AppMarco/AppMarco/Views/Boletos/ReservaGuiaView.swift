@@ -15,21 +15,40 @@ struct ReservaGuiaView: View {
     
     
     var body: some View {
+
         VStack{
-           
-           // Spacer()
-            Image("BannerCentrado")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 300 , height: 200 , alignment: .center)
-                .cornerRadius(0)
-                .padding(20)
-        }
-        VStack{
+            //posible logo
             Text("Agenda tu Visita a #MuseoDeTodos")
-                .font(.title2)
+                .font(.title)
                 .bold()
                 .padding()
+                .border(Color("RosaMarco"), width: 7)
+            
+            DatePicker(
+                "",
+                selection: $fecha_nueva,
+                displayedComponents: [.date]
+                   
+                //reservaVM.$arrReservas
+                //lanzar llamada view model
+                //getReservas()
+            )
+           
+            .onChange(of: fecha_nueva, perform: { value in
+                reservaVM.getReservasFechas(fecha: fecha_nueva) { (result) in
+                    DispatchQueue.main.async {
+                        self.ReservacionesDisponibles = result
+                        print(self.ReservacionesDisponibles)
+                        print(self.email)
+                        print(self.password)
+                        print(self.id)
+                        print(self.name)
+                        print(self.lastname)
+                    }
+                }
+            })
+            .datePickerStyle(WheelDatePickerStyle())
+            .padding()
             ForEach(ReservacionesDisponibles){ item in
                 NavigationLink(destination: ReservaGuiaDetailView(reservation: item), label: {
                     HStack{
@@ -47,44 +66,18 @@ struct ReservaGuiaView: View {
                     
                 })
             }
-                DatePicker(
-                    "Fecha de Visita Guiada",
-                    selection: $fecha_nueva,
-                    displayedComponents: [.date]
-                       
-                    //reservaVM.$arrReservas
-                    //lanzar llamada view model
-                    //getReservas()
-                )
-               
-                .onChange(of: fecha_nueva, perform: { value in
-                    reservaVM.getReservasFechas(fecha: fecha_nueva) { (result) in
-                        DispatchQueue.main.async {
-                            self.ReservacionesDisponibles = result
-                            print(self.ReservacionesDisponibles)
-                            print(self.email)
-                            print(self.password)
-                            print(self.id)
-                            print(self.name)
-                            print(self.lastname)
-                        }
-                    }
-                })
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .padding()
-              
-               
-                  
                 
-             
+                   
                 
         }
         .navigationTitle("Agenda una Visita")
-        .frame(width: 400, height: 400, alignment: .center)
+        .frame(width: 400, height: 400, alignment: .top)
         .padding()
         .scaledToFit()
         .foregroundColor(.black)
         //.background(Color("RosaMarco"))
+        
+        
         
         
     }

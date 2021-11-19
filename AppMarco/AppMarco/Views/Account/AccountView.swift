@@ -84,19 +84,19 @@ struct AccountView: View {
                             Image("2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 100, height: 100)
+                                .frame(width: 80, height: 80)
                                 .clipShape(Rectangle())
                                 .padding(8)
                                 //.background()
                                 .clipShape(Rectangle())
-                                .border(Color.black, width: 9)
+                                .border(Color.black, width: 8)
                                 .offset(y: offset < 0 ? getOffset() - 20: -20)
                                 .scaleEffect(getScale())
                             Spacer()
                             
                             VStack(alignment: .leading, spacing: 8, content: {
                                 Text("Edgar Vergara")
-                                    .font(.title2)
+                                    .font(.headline)
                                     .fontWeight(.bold)
                                     .foregroundColor(.primary)
                                 
