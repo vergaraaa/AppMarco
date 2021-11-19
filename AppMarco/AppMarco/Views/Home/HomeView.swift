@@ -124,7 +124,7 @@ struct HomeView: View {
                                 Text("Recorre las extraordinarias instalaciones de la expo más reciente del Museo y vive la experiencia de visitar MARCO desde cualquier parte.")
                                     .font(.subheadline)
                                     .fontWeight(.semibold)
-                                    //.padding(20)
+                                    .padding(20)
                                     //.scaledToFill()
                                     //.minimumScaleFactor(0.5)
                                     //.lineLimit(1)

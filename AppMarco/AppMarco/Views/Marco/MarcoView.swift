@@ -16,6 +16,8 @@ struct MarcoView: View {
                 VStack {
                     MapView()
                         .scaledToFit()
+                        .frame(width: 700, height: 330)
+                        .clipped()
                     
                     Group {
                         Text("¡VISÍTANOS!")
