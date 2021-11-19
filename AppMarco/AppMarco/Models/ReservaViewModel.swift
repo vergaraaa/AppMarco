@@ -5,6 +5,10 @@ import SwiftUI
 
 class ReservaViewModel : ObservableObject {
     @Published var arrReservas = [ReservasModel]()
+    @Published var showAlertAddReserva = false
+    @Published var textAlert = ""
+    @Published var succAddReserva = false
+    @Published var error = ""
     
     init(){
         
@@ -21,13 +25,19 @@ class ReservaViewModel : ObservableObject {
             switch (result) {
             case .success(let succ ):
                 print(succ)
-
-
+                DispatchQueue.main.async {
+                    self.showAlertAddReserva = true
+                    self.succAddReserva = succ
+                    self.textAlert = "Tu reserva ha sido confirmada"
+                }
                 case .failure(let error):
 
                     print(error)
-
-
+                    DispatchQueue.main.async {
+                        self.showAlertAddReserva = true
+                        self.succAddReserva = false
+                        self.textAlert = "Ha ocurrido un error favor de volver a intentarlo"
+                    }
             }
 
         }
