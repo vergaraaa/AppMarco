@@ -22,6 +22,10 @@ struct AccountView: View {
     @State var tabBarOffset: CGFloat = 0
     @State var reservas = [ReservasModel]()
     
+    var name : String = UserDefaults.standard.string(forKey: "name") ?? ""
+    var lastname : String = UserDefaults.standard.string(forKey: "lastname") ?? ""
+    var email : String = UserDefaults.standard.string(forKey: "email") ?? ""
+    
     @EnvironmentObject var loginVM : LoginViewModel
     var body: some View{
     
@@ -95,12 +99,12 @@ struct AccountView: View {
                             Spacer()
                             
                             VStack(alignment: .leading, spacing: 8, content: {
-                                Text("Edgar Vergara")
+                                Text(name + " " + lastname )
                                     .font(.headline)
                                     .fontWeight(.bold)
                                     .foregroundColor(.primary)
                                 
-                                Text("mail.com")
+                                Text(email)
                                     .foregroundColor(.gray)
                             })
                                 
